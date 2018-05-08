@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/Not1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:drawableRight="@android:drawable/arrow_down_float"
+        android:onClick="Not1"
+        android:paddingRight="10dp"
+        android:text="Action on the Noise Pollution "
+
+        />
+    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+        android:id="@+id/noti1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Not1"
+        android:padding="16dp"
+        app:ael_duration="400"
+        app:ael_expanded="false"
+        app:ael_interpolator="bounce"
+        app:ael_orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not1" />
+    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+    <!-- button 2 -->
+    <Button
+        android:id="@+id/Not2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/noti1"
+        android:drawableRight="@android:drawable/arrow_down_float"
+        android:onClick="Not2"
+        android:paddingRight="10dp"
+        android:text="Action on the Noise Pollution "
+
+        />
+    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+        android:id="@+id/noti2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Not2"
+        android:padding="16dp"
+        app:ael_duration="400"
+        app:ael_expanded="false"
+        app:ael_interpolator="bounce"
+        app:ael_orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not2" />
+    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+    <!-- button  -->
+    <Button
+        android:id="@+id/Not3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/noti2"
+        android:drawableRight="@android:drawable/arrow_down_float"
+        android:onClick="Not3"
+        android:paddingRight="10dp"
+        android:text=""
+
+        />
+    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+        android:id="@+id/noti3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Not3"
+        android:padding="16dp"
+        app:ael_duration="400"
+        app:ael_expanded="false"
+        app:ael_interpolator="bounce"
+        app:ael_orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not4" />
+    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+    <!-- button  -->
+    <Button
+        android:id="@+id/Not4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/noti3"
+        android:drawableRight="@android:drawable/arrow_down_float"
+        android:onClick="Not4"
+        android:paddingRight="10dp"
+        android:text=" Service for eldery cares "
+
+        />
+    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+        android:id="@+id/noti4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Not4"
+        android:padding="16dp"
+        app:ael_duration="400"
+        app:ael_expanded="false"
+        app:ael_interpolator="bounce"
+        app:ael_orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not4" />
+    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+        <!-- button  -->
+        <Button
+            android:id="@+id/Not5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/noti4"
+            android:drawableRight="@android:drawable/arrow_down_float"
+            android:onClick="Not5"
+            android:paddingRight="10dp"
+            android:text=""
+
+            />
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/noti5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/Not4"
+            android:padding="16dp"
+            app:ael_duration="400"
+            app:ael_expanded="false"
+            app:ael_interpolator="bounce"
+            app:ael_orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not5" />
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    tools:context=".Service" >
+    <Button
+        android:id="@+id/mun"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="MUnicipality"
+
+        android:onClick="s1"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"
+        />
+    <Button
+        android:id="@+id/np"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_below="@+id/mun"
+        android:layout_centerHorizontal="true"
+        android:text="Nepal Police"
+
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:onClick="s2"
+        />
+    <Button
+        android:id="@+id/wm"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_below="@+id/np"
+        android:layout_centerHorizontal="true"
+        android:text="Waste Mangement"
+
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:onClick="s3"
+        />
+    <Button
+        android:id="@+id/nea"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_below="@+id/wm"
+        android:layout_centerHorizontal="true"
+        android:text="Electricity authority"
+         android:textSize="25sp"
+        android:textStyle="bold|italic"
+
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:onClick="s4"
+        />
+    <Button
+        android:id="@+id/amb"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_below="@+id/nea"
+        android:layout_centerHorizontal="true"
+        android:text="Ambulance"
+
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:onClick="s5"
+
+        />
+
+
+</RelativeLayout>
+</ScrollView>

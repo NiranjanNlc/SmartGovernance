@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">SmartGovernance</string>
+    <string name="complain">Complain</string>
+    <string name="Document">Document</string>
+    <string name="Feedback">Feedback</string>
+    <string name="notice">Notice</string>
+    <string name="Service">Service</string>
+    <string name="not1"> Dj sounds are creating the extreme noise pollution.It has distratded the diffrent human activity ,reduce the
+    concenrtation of people on work.some of its content are not easily digested by the society in which we livw.
+    Realizing this fact, Government has taken action to ban the DJ sound in the area of municipality.anyone breaching this Would be heavily penalised according to the law.</string>
+    <string name="not2">
+        Municipality has launched the vaccination program for the goat free of cost.The vetinary doctor will be available to your days within fewdays.
+        So ,all the concerned authority are requested to coordinate and assist this program and make this campagain sucessful.
+    </string>
+
+    <string name="not4">  Government as always , is in the favoue of making the service delivery easier,feasible and compatible with
+    citizens need. So, realizing the disablity of the elderely citizen , government has started the delivery of bridda bhatta in the home of
+    citizen .As well as there will be health checkup in that time. So, be alert and informed about it.</string>
+    <string name="not5">no notices............  </string>
+    <string name="not6"> Stay tuned........... </string>
+    <string-array name="project">
+        <item>taxRates</item>
+        <item> 9809282747</item>
+        <item> 9809282747</item>
+        <item>9809282747</item>
+    </string-array>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/p1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:text="New tax rates "
+        android:gravity="start"
+        android:onClick="p1"
+     />
+
+    <Button
+        android:id="@+id/p2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:text=" Code of ethics for building"
+        android:gravity="start"
+        android:onClick="p2"/>
+    <Button
+        android:id="@+id/p3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:text="Project3"
+        android:gravity="start" />
+    <Button
+    android:id="@+id/p4"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textAlignment="textStart"
+    android:text="Project"
+    android:gravity="start" />
+    <Button
+        android:id="@+id/p5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:text="Project"
+        android:gravity="start" />
+
+
+
+
+
+
+
+</LinearLayout>
