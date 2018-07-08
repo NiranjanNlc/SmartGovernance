@@ -2,38 +2,54 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/linearLayout1"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/Not1"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical" >
-  <Spinner
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:text ="Select project"
-      android:id="@+id/spin"
-/>        <TextView
-            android:id="@+id/textViewSMS"
+        android:layout_height="wrap_content"
+
+        android:drawableRight="@android:drawable/arrow_down_float"
+        android:onClick="Not1"
+        android:paddingRight="10dp"
+        android:text="Action on the Noise Pollution "
+
+        />
+    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+        android:id="@+id/noti1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Not1"
+        android:padding="16dp"
+        app:ael_duration="400"
+        app:ael_expanded="false"
+        app:ael_interpolator="bounce"
+        app:ael_orientation="vertical">
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter the Message : "
-/>
-        <EditText
-            android:id="@+id/eSMS"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
-            android:lines="3"
-            android:gravity="top" />
-            />
-        <Button
-            android:id="@+id/bS"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Send"
-            android:onClick="send"
-             />
+            android:text="@string/not1"
+            android:id="@+id/f1"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/f1">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sms"
+                android:onClick="feedback"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:onClick="email"/>
+        </LinearLayout>
+    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+    <!-- button 2 -->
 
-    </LinearLayout>
+
+
 </LinearLayout>

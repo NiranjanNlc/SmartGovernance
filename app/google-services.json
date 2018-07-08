@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "87036318274",
+    "firebase_url": "https://smartgovernance-d56c6.firebaseio.com",
+    "project_id": "smartgovernance-d56c6",
+    "storage_bucket": "smartgovernance-d56c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:87036318274:android:84e046ea917ce049",
+        "android_client_info": {
+          "package_name": "com.example.ashok.smartgovernance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "87036318274-ii5ssk5tvoitk4niis7ht02oggt6hvn5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ashok.smartgovernance",
+            "certificate_hash": "ffe020bc3ec1c307ca00d9cf26647580690baf0e"
+          }
+        },
+        {
+          "client_id": "87036318274-esgeg4bk76uegjjkb04s6iiim2bhro6q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8ISo-TKWtPoGWicLmFKsw4I_h4icX-aQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "87036318274-esgeg4bk76uegjjkb04s6iiim2bhro6q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".RComplain">
+
+
+    <TextView
+        android:id="@+id/rid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="1"
+
+        />
+
+    <TextView
+        android:id="@+id/rtop"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+
+        android:text="Crime Scene"
+
+        />
+    <TextView
+        android:id="@+id/contact"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+
+        android:text=""
+
+        />
+
+    <TextView
+        android:id="@+id/rloc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="lamachaur" />
+
+    <TextView
+        android:id="@+id/rgriv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BIke accident " />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please give your reply here " />
+
+    <EditText
+        android:id="@+id/rrep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:lines="5"
+          />
+
+    <Button
+        android:id="@+id/reply"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="Adress"
+        android:text="Adress this " />
+
+
+</LinearLayout>

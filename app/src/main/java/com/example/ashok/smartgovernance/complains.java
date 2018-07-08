@@ -42,8 +42,8 @@ public class complains extends AppCompatActivity implements View.OnClickListener
     public static final String KEY_complainMsg = "complainMsg";
     public static final String KEY_IMG = "image";
 
-    private String name, location, email, complainMsg, topic;
-    private Bitmap bitmap;
+  //   private String name, location, email, complainMsg, topic;
+  private Bitmap bitmap;
     private final int IMG_REQUEST = 1;
 
 
@@ -72,17 +72,19 @@ public class complains extends AppCompatActivity implements View.OnClickListener
         final String complainMsg = (String) comp.getText().toString().trim();
 
         // Request a string response from the provided URL.
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.2.106/SmartGovernance/includes/DbConnect.php",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http:/192.168.229.50/SmartGovernance/includes/DbConnect.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+
                         Toast.makeText(complains.this, response, Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(complains.this,complains.class));
+                        startActivity(new Intent(complains.this,MainActivity.class));
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(complains.this, error.toString(), Toast.LENGTH_LONG).show();
+                startActivity(new Intent(complains.this,MainActivity.class));
             }
         }) {
             @Override

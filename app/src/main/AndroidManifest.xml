@@ -5,9 +5,14 @@
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-     <uses-permission android:name="android.permission.CALL_PHONE">
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
-     </uses-permission>
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,11 +28,24 @@
             </intent-filter>
         </activity>
         <activity android:name=".Notice" />
-        <activity android:name=".Complain" />
         <activity android:name=".Feedback" />
         <activity android:name=".Doc" />
         <activity android:name=".Service" />
-        <activity android:name=".complains"></activity>
+        <activity android:name=".complains" />
+        <activity android:name=".adressComplain" />
+        <activity android:name=".Registration" />
+        <activity android:name=".ApproveRegistrartion" />
+        <activity android:name=".ViewFeedback" />
+        <activity android:name=".Government" />
+        <activity android:name=".RComplain" />
+        <activity android:name=".splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Discussion"></activity>
     </application>
 
 </manifest>

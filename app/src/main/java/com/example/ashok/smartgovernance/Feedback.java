@@ -16,6 +16,7 @@ import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
 public class Feedback extends AppCompatActivity   {
     Button bs,p1,p2,p3,p4,p5;
     EditText eSMS;
+    ExpandableRelativeLayout f1,f2 ;
     Spinner spinner;
        ArrayAdapter<CharSequence> adapter ;
 
@@ -23,12 +24,12 @@ public class Feedback extends AppCompatActivity   {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.form);
-        bs=(Button) findViewById(R.id.bS);
-        spinner =(Spinner) findViewById(R.id.spin);
+      //  bs=(Button) findViewById(R.id.bS);
+      //  spinner =(Spinner) findViewById(R.id.spin);
         eSMS = (EditText) findViewById(R.id.eSMS);
-  adapter = ArrayAdapter.createFromResource(this,R.array.project,android.R.layout.simple_spinner_item);
- adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
- spinner.setAdapter(adapter);
+ // adapter = ArrayAdapter.createFromResource(this,R.array.project,android.R.layout.simple_spinner_item);
+// adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// spinner.setAdapter(adapter);
 
         }
 
@@ -62,7 +63,18 @@ public class Feedback extends AppCompatActivity   {
 
 
 
+    public void Not1(View view) {
+        f1 = (ExpandableRelativeLayout) findViewById(R.id.noti1);
+        f1.toggle(); // toggle expand and collapse
 
+    }
+    public void feedback(View view) {
+        setContentView(R.layout.activity_feedback);
+    }
+    public void email(View view) {
+
+
+    }
 
 
 }

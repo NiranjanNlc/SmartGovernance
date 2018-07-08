@@ -11,20 +11,24 @@ public class Service extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_service);
+        setContentView(R.layout.service);
     }
+
+
+
+
+
+
+
 
     public void s1(View view) {
 
-        Intent i = new Intent(Intent.ACTION_CALL);
-        i.setData(Uri.parse("tel:9845604979"));
-        startActivity(i);
+        startActivity(new Intent(Service.this,MainActivity.class));
+
     }
 
     public void s2(View view) {
-        Intent i = new Intent(Intent.ACTION_CALL);
-        i.setData(Uri.parse("tel:9845604979"));
-        startActivity(i);
+        startActivity(new Intent(Service.this,adressComplain.class));
     }
 
 

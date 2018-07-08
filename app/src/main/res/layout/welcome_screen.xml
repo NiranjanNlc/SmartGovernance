@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+    <LinearLayout android:layout_height="0dp"
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="Notice"
+            android:cropToPadding="true"
+            android:onClick="b1"
+            android:src="@drawable/index" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:contentDescription="Complain"
+            android:cropToPadding="true"
+            android:onClick="b2"
+            android:scaleType="centerCrop"
+            android:src="@drawable/complain" />
+
+
+    </LinearLayout>
+    //  second row
+    <LinearLayout android:layout_height="0dp"
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:contentDescription="Feedback"
+            android:cropToPadding="true"
+            android:onClick="b3"
+            android:scaleType="fitCenter"
+            android:src="@drawable/feedback" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:contentDescription="Document"
+            android:cropToPadding="true"
+            android:onClick="b4"
+            android:scaleType="centerCrop"
+            android:src="@drawable/RTI1" />
+
+
+    </LinearLayout>
+
+
+    //  2rd rowskkkkjhgfdcghxzjk
+    <LinearLayout android:layout_height="0dp"
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="Service"
+            android:cropToPadding="true"
+            android:onClick="b5"
+            android:src="@drawable/sergvice" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="Register"
+            android:cropToPadding="true"
+            android:onClick="b6"
+            android:src="@drawable/register" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
