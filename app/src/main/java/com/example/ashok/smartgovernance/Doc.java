@@ -11,10 +11,10 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class Doc extends AppCompatActivity implements View.OnClickListener {
+public class Doc extends AppCompatActivity   {
     DownloadManager d;
     private Spinner spinner;
-    private static final String[] paths = new String[]{"Budget ", "Fiscal yaear planning ", "Annual expenditure","Subsidee for farmer"};
+    private static final String[] paths = new String[]{"Budget", "Fiscal yaear planning", "Annual expenditure","Subsidee for farmer"};
 
 
     TextView t1;
@@ -31,8 +31,8 @@ public class Doc extends AppCompatActivity implements View.OnClickListener {
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-      button = findViewById(R.id.button);
-      button.setOnClickListener(this);
+      button = findViewById(R.id.but);
+     // button.setOnClickListener(this);
 
 
 
@@ -56,26 +56,25 @@ public class Doc extends AppCompatActivity implements View.OnClickListener {
         a5.setOnClickListener(this);*/
     }
 
-    public void onClick(View v) {
+    public void select(View v) {
          final  String s   ;
 
         s = spinner.getSelectedItem().toString();
 
         switch (s) {
             case "Budget":
-                download ("");
+                download ("http://niranjanlamichhane.com/SmartGovernance/doc/budget.pdf");
                        break;
-            case "Fiscal yaear planning ":
-
+            case "Fiscal yaear planning":
+                download ("http://niranjanlamichhane.com/SmartGovernance/doc/planning.pdf");
                 break;
             case "Annual expenditure":
-
+                download ("http://niranjanlamichhane.com/SmartGovernance/doc/kharcha.pdf");
                 break;
-            case "":
 
-                break;
             case "Subsidee for farmer":
 
+                download ("http://niranjanlamichhane.com/SmartGovernance/doc/subsidues.pdf");
                 break;
 
             default:
@@ -92,13 +91,14 @@ public class Doc extends AppCompatActivity implements View.OnClickListener {
     }
 
 
-    private void download(String s)
+    private void download(String p)
     {
         d = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-        Uri uri = Uri.parse(s);
+        Uri uri = Uri.parse(p);
         DownloadManager.Request req = new DownloadManager.Request(uri);
         req.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-        Long re = d.enqueue(req);
+        req.setDescription("Downloading ");
+        long re =  d.enqueue(req);
     }
 }
 

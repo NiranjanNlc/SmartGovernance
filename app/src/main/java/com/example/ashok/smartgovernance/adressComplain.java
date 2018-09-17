@@ -22,7 +22,7 @@ import java.util.List;
 
 public  class adressComplain extends AppCompatActivity   {
 
-    private static final String URL_COMPLAIN = "http:/192.168.1.3/SmartGovernance/includes/Complain.php";
+    private static final String URL_COMPLAIN = "http://niranjanlamichhane.com/SmartGovernance/includes/Complains.php";
     //a list to store all the products
     List<ComplainModel> listitem  ;
 
@@ -37,13 +37,13 @@ public  class adressComplain extends AppCompatActivity   {
         recyclerView = findViewById(R.id.complainRecycler);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-       // inirtalize lists
-         listitem = new ArrayList<>();
-         loadcomplain();
+        // inirtalize lists
+        listitem = new ArrayList<>();
+        loadcomplain();
     }
     private void loadcomplain()
     {
-       final  ProgressDialog p = new ProgressDialog(this);
+        final  ProgressDialog p = new ProgressDialog(this);
         p.setMessage("LOADING data .....");
         p.show();
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_COMPLAIN,
@@ -63,13 +63,14 @@ public  class adressComplain extends AppCompatActivity   {
 
                                 //adding the product to product list
                                 listitem.add(new ComplainModel(
-                                        complain.getString("cid"),
                                         complain.getString("Image"),
                                         complain.getString("topic"),
                                         complain.getString("location"),
+                                        complain.getString("complainMsg"),
                                         complain.getString("name"),
                                         complain.getString("email"),
-                                        complain.getString("complainMsg")
+                                        complain.getString("cid")
+
 
 
                                 ));

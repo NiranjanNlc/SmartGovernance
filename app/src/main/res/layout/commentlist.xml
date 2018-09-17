@@ -7,11 +7,6 @@
     android:layout_marginStart="@dimen/activity_horizontal_margin"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/photoImageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true" />
 
     <TextView
         android:id="@+id/messageTextView"

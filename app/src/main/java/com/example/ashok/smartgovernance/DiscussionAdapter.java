@@ -33,7 +33,7 @@ public class DiscussionAdapter extends ArrayAdapter<ModelDiscussion> {
             convertView = ((Activity) getContext()).getLayoutInflater().inflate(R.layout.commentlist, parent, false);
         }
 
-        ImageView photoImageView = (ImageView) convertView.findViewById(R.id.photoImageView);
+      //  ImageView photoImageView = (ImageView) convertView.findViewById(R.id.photoImageView);
         TextView messageTextView = (TextView) convertView.findViewById(R.id.messageTextView);
         TextView authorTextView = (TextView) convertView.findViewById(R.id.nameTextView);
 
@@ -42,13 +42,13 @@ public class DiscussionAdapter extends ArrayAdapter<ModelDiscussion> {
         boolean isPhoto = message.getPhotoUrl() != null;
         if (isPhoto) {
             messageTextView.setVisibility(View.GONE);
-            photoImageView.setVisibility(View.VISIBLE);
+           /* photoImageView.setVisibility(View.VISIBLE);
             Glide.with(photoImageView.getContext())
                     .load(message.getPhotoUrl())
-                    .into(photoImageView);
+                    .into(photoImageView); */
         } else {
             messageTextView.setVisibility(View.VISIBLE);
-            photoImageView.setVisibility(View.GONE);
+         //   photoImageView.setVisibility(View.GONE);
             messageTextView.setText(message.getText());
         }
         authorTextView.setText(message.getName());

@@ -1,5 +1,6 @@
 package com.example.ashok.smartgovernance;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -8,9 +9,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -24,6 +28,7 @@ import com.android.volley.toolbox.Volley;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -41,50 +46,90 @@ public class complains extends AppCompatActivity implements View.OnClickListener
     public static final String KEY_location = "location";
     public static final String KEY_complainMsg = "complainMsg";
     public static final String KEY_IMG = "image";
-
+    private Spinner spinner;
+    private static final String[] topic = new String[]{"road","irregularity","medical","administration","education","OTHER"};
+    private static final String URL_COMPLAIN = "http://niranjanlamichhane.com/SmartGovernance/includes/reg.php";
   //   private String name, location, email, complainMsg, topic;
   private Bitmap bitmap;
     private final int IMG_REQUEST = 1;
-
+    Button btnDatePicker ;
+    EditText txtDate ;
+    private int mYear, mMonth, mDay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complains);
-        ename = (EditText) findViewById(R.id.ename);
-        emails = (EditText) findViewById(R.id.emails);
-        top = (EditText) findViewById(R.id.top);
-        loc = (EditText) findViewById(R.id.loc);
-        comp = (EditText) findViewById(R.id.comp);
-        img = (ImageView) findViewById(R.id.img);
-        upload = (Button) findViewById(R.id.upload);
+        ename = findViewById(R.id.ename);
+        emails = findViewById(R.id.emails);
+       // top = findViewById(R.id.top);
+    //    loc = findViewById(R.id.loc);
+        comp = findViewById(R.id.comp);
+        img = findViewById(R.id.img);
+        upload = findViewById(R.id.upload);
 
-        buttonSend = (Button) findViewById(R.id.buttonSend);
+        buttonSend = findViewById(R.id.buttonSend);
         upload.setOnClickListener(this);
         buttonSend.setOnClickListener((View.OnClickListener) this);
-    }
+        // SPINNER
+        spinner = (Spinner)findViewById(R.id.spinner);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(complains.this,
+                android.R.layout.simple_spinner_item,topic);
 
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        btnDatePicker=(Button)findViewById(R.id.btn_date);
+
+        txtDate=(EditText)findViewById(R.id.in_date);
+      //  btnDatePicker.setOnClickListener((View.OnClickListener) this);
+    }
+    public void get (View v) {
+
+        if (v == btnDatePicker) {
+
+            // Get Current Date
+            final Calendar c = Calendar.getInstance();
+            mYear = c.get(Calendar.YEAR);
+            mMonth = c.get(Calendar.MONTH);
+            mDay = c.get(Calendar.DAY_OF_MONTH);
+
+
+            DatePickerDialog datePickerDialog = new DatePickerDialog(this,
+                    new DatePickerDialog.OnDateSetListener() {
+
+                        @Override
+                        public void onDateSet(DatePicker view, int year,
+                                              int monthOfYear, int dayOfMonth) {
+
+                            txtDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+
+                        }
+                    }, mYear, mMonth, mDay);
+            datePickerDialog.show();
+        }
+    }
     private void SendComplain() {
-        final String name = (String) ename.getText().toString().trim();
-        final String email = (String) emails.getText().toString().trim();
-        final String topic = (String) top.getText().toString().trim();
-        final String location = (String) loc.getText().toString().trim();
-        final String complainMsg = (String) comp.getText().toString().trim();
+        final String name = ename.getText().toString().trim();
+        final String email = emails.getText().toString().trim();
+        final String topic = spinner.getSelectedItem().toString();
+        final String location =txtDate.getText().toString().trim();
+        final String complainMsg = comp.getText().toString().trim();
 
         // Request a string response from the provided URL.
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http:/192.168.229.50/SmartGovernance/includes/DbConnect.php",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST,  URL_COMPLAIN,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
 
                         Toast.makeText(complains.this, response, Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(complains.this,MainActivity.class));
+                        Intent intent = new Intent(complains.this, welcome.class);
+                        startActivity(intent);
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(complains.this, error.toString(), Toast.LENGTH_LONG).show();
-                startActivity(new Intent(complains.this,MainActivity.class));
+                Toast.makeText(complains.this,"RETRY "+ error.toString(), Toast.LENGTH_LONG).show();
+                 ;
             }
         }) {
             @Override
@@ -139,12 +184,12 @@ public class complains extends AppCompatActivity implements View.OnClickListener
         }
 
     }
-     private String imageToString (Bitmap bitmap)
-     {
-         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-         bitmap.compress(Bitmap.CompressFormat.JPEG,100,byteArrayOutputStream);
-         byte [] imgBytes = byteArrayOutputStream.toByteArray();
-         return Base64.encodeToString(imgBytes,Base64.DEFAULT);
-     }
+    private String imageToString (Bitmap bitmap)
+    {
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG,100,byteArrayOutputStream);
+        byte [] imgBytes = byteArrayOutputStream.toByteArray();
+        return Base64.encodeToString(imgBytes,Base64.DEFAULT);
+    }
 
 }

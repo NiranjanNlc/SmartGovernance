@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://www.journaldev.com/9976/android-date-time-picker-dialog -->
+<html lang="en-US" prefix="og: http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="stndz-style"></style>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Android Date Time Picker Dialog - JournalDev</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v7.8 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Android Date Time Picker Dialog Example Tutorial. Android DatePickerDialog, TimePickerDialog, onDateSetListener, onTimeSetListener, download project">
+<link rel="canonical" href="https://www.journaldev.com/9976/android-date-time-picker-dialog">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android Date Time Picker Dialog - JournalDev">
+<meta property="og:description" content="Android Date Time Picker Dialog Example Tutorial. Android DatePickerDialog, TimePickerDialog, onDateSetListener, onTimeSetListener, download project">
+<meta property="og:url" content="https://www.journaldev.com/9976/android-date-time-picker-dialog">
+<meta property="og:site_name" content="JournalDev">
+<meta property="article:section" content="Android">
+<meta property="article:published_time" content="2015-12-13T05:16:05-07:00">
+<meta property="article:modified_time" content="2018-04-02T07:48:52-07:00">
+<meta property="og:updated_time" content="2018-04-02T07:48:52-07:00">
+<meta property="og:image" content="https://www.journaldev.com/wp-content/uploads/2015/12/android-date-time-picker-dialog-project.png">
+<meta property="og:image:secure_url" content="https://www.journaldev.com/wp-content/uploads/2015/12/android-date-time-picker-dialog-project.png">
+<meta property="og:image:width" content="464">
+<meta property="og:image:height" content="646">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="Android Date Time Picker Dialog Example Tutorial. Android DatePickerDialog, TimePickerDialog, onDateSetListener, onTimeSetListener, download project">
+<meta name="twitter:title" content="Android Date Time Picker Dialog - JournalDev">
+<meta name="twitter:image" content="https://www.journaldev.com/wp-content/uploads/2015/12/android-date-time-picker-dialog-project-323x450.png">
+<meta name="twitter:creator" content="@anupam32">
+<script type="text/javascript" async="" src="./Android Date Time Picker Dialog - JournalDev_files/analytics.js.download"></script><script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Person","url":"https:\/\/www.journaldev.com\/","sameAs":[],"@id":"#person","name":"Pankaj Kumar"}</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/www.journaldev.com\/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"https:\/\/www.journaldev.com\/android","name":"Android"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/www.journaldev.com\/9976\/android-date-time-picker-dialog","name":"Android Date Time Picker Dialog"}}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="amphtml" href="https://www.journaldev.com/9976/android-date-time-picker-dialog/amp"><link rel="alternate" type="application/rss+xml" title="JournalDev » Feed" href="https://www.journaldev.com/feed">
+<link rel="alternate" type="application/rss+xml" title="JournalDev » Comments Feed" href="https://www.journaldev.com/comments/feed">
+<link rel="alternate" type="application/rss+xml" title="JournalDev » Android Date Time Picker Dialog Comments Feed" href="https://www.journaldev.com/9976/android-date-time-picker-dialog/feed">
+<link rel="stylesheet" id="news-pro-theme-css" href="./Android Date Time Picker Dialog - JournalDev_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="youtube-subscribe-bar-style-css" href="./Android Date Time Picker Dialog - JournalDev_files/custom.css" type="text/css" media="all">
+<link rel="stylesheet" id="toc-screen-css" href="./Android Date Time Picker Dialog - JournalDev_files/screen.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="dashicons-css" href="./Android Date Time Picker Dialog - JournalDev_files/dashicons.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="google-fonts-css" href="./Android Date Time Picker Dialog - JournalDev_files/css" type="text/css" media="all">
+<script type="text/javascript" src="./Android Date Time Picker Dialog - JournalDev_files/jquery.js.download"></script>
+<script type="text/javascript" src="./Android Date Time Picker Dialog - JournalDev_files/jquery-migrate.min.js.download"></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='//cdn.journaldev.com/wp-content/themes/genesis/lib/js/html5shiv.min.js'></script>
+<![endif]-->
+<script type="text/javascript" src="./Android Date Time Picker Dialog - JournalDev_files/responsive-menu.js.download"></script>
+<link rel="https://api.w.org/" href="https://www.journaldev.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.journaldev.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.journaldev.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 4.9.7">
+<link rel="shortlink" href="https://www.journaldev.com/?p=9976">
+<link rel="alternate" type="application/json+oembed" href="https://www.journaldev.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.journaldev.com%2F9976%2Fandroid-date-time-picker-dialog">
+<link rel="alternate" type="text/xml+oembed" href="https://www.journaldev.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.journaldev.com%2F9976%2Fandroid-date-time-picker-dialog&amp;format=xml">
+
+<link rel="icon" type="image/png" href="https://cdn.journaldev.com/fav.png"><style type="text/css">.site-title a { background: url(https://www.journaldev.com/wp-content/uploads/2018/07/logo1.svg) no-repeat !important; }</style>
+      <meta name="onesignal" content="wordpress-plugin">
+          <link rel="manifest" href="https://www.journaldev.com/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/manifest.json.php?gcm_sender_id=">
+          <script src="./Android Date Time Picker Dialog - JournalDev_files/OneSignalSDK.js.download" async=""></script>    <script>
+
+      window.OneSignal = window.OneSignal || [];
+
+      OneSignal.push( function() {
+        OneSignal.SERVICE_WORKER_UPDATER_PATH = "OneSignalSDKUpdaterWorker.js.php";
+        OneSignal.SERVICE_WORKER_PATH = "OneSignalSDKWorker.js.php";
+        OneSignal.SERVICE_WORKER_PARAM = { scope: '/' };
+
+        OneSignal.setDefaultNotificationUrl("https://www.journaldev.com");
+        var oneSignal_options = {};
+        window._oneSignalInitOptions = oneSignal_options;
+
+        oneSignal_options['wordpress'] = true;
+oneSignal_options['appId'] = 'bab8c5d5-918b-46f8-8634-2efa6c23e327';
+oneSignal_options['autoRegister'] = true;
+oneSignal_options['welcomeNotification'] = { };
+oneSignal_options['welcomeNotification']['title'] = "";
+oneSignal_options['welcomeNotification']['message'] = "";
+oneSignal_options['path'] = "https://www.journaldev.com/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/";
+oneSignal_options['safari_web_id'] = "web.onesignal.auto.0818a4e7-118f-4fc1-b0e2-07892e811a2a";
+oneSignal_options['promptOptions'] = { };
+oneSignal_options['notifyButton'] = { };
+oneSignal_options['notifyButton']['enable'] = true;
+oneSignal_options['notifyButton']['position'] = 'bottom-left';
+oneSignal_options['notifyButton']['theme'] = 'default';
+oneSignal_options['notifyButton']['size'] = 'medium';
+oneSignal_options['notifyButton']['prenotify'] = true;
+oneSignal_options['notifyButton']['displayPredicate'] = function() {
+              return OneSignal.isPushNotificationsEnabled()
+                      .then(function(isPushEnabled) {
+                          return !isPushEnabled;
+                      });
+            };
+oneSignal_options['notifyButton']['showCredit'] = false;
+oneSignal_options['notifyButton']['text'] = {};
+oneSignal_options['notifyButton']['text']['message.prenotify'] = 'Stay Updated with us! Subscribe to our free notifications.';
+oneSignal_options['notifyButton']['text']['tip.state.subscribed'] = 'Thanks for subscribing!';
+oneSignal_options['notifyButton']['text']['message.action.subscribed'] = 'Thanks for subscribing!';
+              OneSignal.init(window._oneSignalInitOptions);
+                    });
+
+      function documentInitOneSignal() {
+        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+
+        var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+      }
+
+      if (document.readyState === 'complete') {
+           documentInitOneSignal();
+      }
+      else {
+           window.addEventListener("load", function(event){
+               documentInitOneSignal();
+          });
+      }
+    </script>
+
+<link rel="icon" href="https://cdn.journaldev.com/wp-content/uploads/2015/08/jd-site-img-150x150.png" sizes="32x32">
+<link rel="icon" href="https://cdn.journaldev.com/wp-content/uploads/2015/08/jd-site-img.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://cdn.journaldev.com/wp-content/uploads/2015/08/jd-site-img.png">
+<meta name="msapplication-TileImage" content="//cdn.journaldev.com/wp-content/uploads/2015/08/jd-site-img.png">
+		<style type="text/css" id="wp-custom-css">
+			.scriptlesssocialsharing{box-sizing:border-box;margin:18px auto}
+.scriptlesssocialsharing-buttons{border-collapse:separate;border-spacing:3px;display:table;table-layout:fixed;width:100%}
+.scriptlesssocialsharing-buttons a.button{border:none;border-radius:0;color:white;display:table-cell;text-align:center;text-decoration:none;padding:9px}
+.scriptlesssocialsharing-buttons a.button:hover{color:#fff}
+.scriptlesssocialsharing-buttons .sss-name{position:inherit;clip:rect(1px, 1px, 1px, 1px);height:1px;width:1px;border:0;overflow:hidden;word-wrap:break-word}
+.scriptlesssocialsharing-buttons .button.email{background-color:#333;background-color:rgba(51,51,51,0.8)}.scriptlesssocialsharing-buttons .button.email:hover{background-color:#333}
+.scriptlesssocialsharing-buttons .button.twitter{background-color:#55acee;background-color:rgba(85,172,238,0.8)}.scriptlesssocialsharing-buttons .button.twitter:hover{background-color:#55acee}
+.scriptlesssocialsharing-buttons .button.facebook{background-color:#3b5998;background-color:rgba(59,89,152,0.8)}.scriptlesssocialsharing-buttons .button.facebook:hover{background-color:#3b5998}
+.scriptlesssocialsharing-buttons .button.linkedin{background-color:#0077b5;background-color:rgba(0,119,181,0.8)}.scriptlesssocialsharing-buttons .button.linkedin:hover{background-color:#0077b5}
+.scriptlesssocialsharing-buttons .button.google{background-color:#dc4e41;background-color:rgba(220,78,65,0.8)}.scriptlesssocialsharing-buttons .button.google:hover{background-color:#dc4e41}
+.scriptlesssocialsharing-buttons .button.pinterest {background-color: #bd081c;background-color: rgba(189, 8, 28, .8)}
+.scriptlesssocialsharing-buttons .button.pinterest:hover {background-color: #bd081c}  
+.scriptlesssocialsharing-buttons .button.reddit {background-color: #ff4500;background-color: rgba(255, 69, 0, .8)}
+.scriptlesssocialsharing-buttons .button.reddit:hover {background-color: #ff4500}
+@media print {.scriptlesssocialsharing {display: none}}		</style>
+	<script id="_bsa_srv-CKYI6KQU_0" type="text/javascript" src="./Android Date Time Picker Dialog - JournalDev_files/CKYI6KQU.json"></script><script type="text/javascript" async="" src="./Android Date Time Picker Dialog - JournalDev_files/a.min.js.download"></script><script type="text/javascript" async="" src="./Android Date Time Picker Dialog - JournalDev_files/a.min.js(1).download"></script><link rel="stylesheet" href="./Android Date Time Picker Dialog - JournalDev_files/OneSignalSDKStyles.css"></head>
+<body class="post-template-default single single-post postid-9976 single-format-standard dwpb-push-page dwpb_responsive_extra_small custom-header header-image content-sidebar dwpb-open" itemscope="" itemtype="https://schema.org/WebPage"><div class="site-container"><header class="site-header" itemscope="" itemtype="https://schema.org/WPHeader"><div class="wrap"><div class="title-area"><p class="site-title" itemprop="headline"><a href="https://www.journaldev.com/">JournalDev</a></p><p class="site-description" itemprop="description">Java, Java EE, Android, Python, Web Development Tutorials</p></div><div class="widget-area header-widget-area">
+<!-- Quick Adsense Wordpress Plugin: http://quickadsense.com/ -->
+<section id="adswidget4-quick-adsense-2" class="widget widget_adswidget4-quick-adsense"><div class="widget-wrap"><script async="" src="./Android Date Time Picker Dialog - JournalDev_files/f.txt"></script>
+<!-- CM_JD_AP_Top_Responsive -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5143693538742787" data-ad-slot="5697562523" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></section>
+</div></div></header><nav class="nav-primary" aria-label="Main" itemscope="" itemtype="https://schema.org/SiteNavigationElement"><div class="wrap"><div class="responsive-menu-icon"></div><ul id="menu-new-headermenu" class="menu genesis-nav-menu menu-primary responsive-menu"><li id="menu-item-17036" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17036"><a href="https://www.journaldev.com/java-tutorial-java-ee-tutorials" itemprop="url"><span itemprop="name">Java Tutorial</span></a></li>
+<li id="menu-item-7611" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7611"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#" itemprop="url"><span itemprop="name">#Index Posts</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-7612" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7612"><a href="https://www.journaldev.com/7153/core-java-tutorial" itemprop="url"><span itemprop="name">Core Java Tutorial</span></a></li>
+	<li id="menu-item-7613" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7613"><a href="https://www.journaldev.com/1827/java-design-patterns-example-tutorial" itemprop="url"><span itemprop="name">Java Design Patterns</span></a></li>
+	<li id="menu-item-7614" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7614"><a href="https://www.journaldev.com/2114/servlet-jsp-tutorial" itemprop="url"><span itemprop="name">Servlet JSP Tutorial</span></a></li>
+	<li id="menu-item-7615" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7615"><a href="https://www.journaldev.com/2310/struts2-tutorial-with-example-projects" itemprop="url"><span itemprop="name">Struts 2 Tutorial</span></a></li>
+	<li id="menu-item-7616" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7616"><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial" itemprop="url"><span itemprop="name">Spring Tutorial</span></a></li>
+	<li id="menu-item-7638" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7638"><a href="https://www.journaldev.com/7635/jsf-tutorial" itemprop="url"><span itemprop="name">JSF Tutorial</span></a></li>
+	<li id="menu-item-7620" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7620"><a href="https://www.journaldev.com/5516/primefaces-tutorial-with-example-projects" itemprop="url"><span itemprop="name">Primefaces Tutorial</span></a></li>
+	<li id="menu-item-7619" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7619"><a href="https://www.journaldev.com/2681/jdbc-tutorial" itemprop="url"><span itemprop="name">JDBC Tutorial</span></a></li>
+	<li id="menu-item-7617" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7617"><a href="https://www.journaldev.com/3793/hibernate-tutorial" itemprop="url"><span itemprop="name">Hibernate Tutorial</span></a></li>
+	<li id="menu-item-7618" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7618"><a href="https://www.journaldev.com/6672/mongodb-tutorial-installation-example-projects-integration-with-servlet-spring-jsf" itemprop="url"><span itemprop="name">MongoDB Tutorial</span></a></li>
+</ul>
+</li>
+<li id="menu-item-7621" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7621"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#" itemprop="url"><span itemprop="name">#Interview Questions</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-7622" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7622"><a href="https://www.journaldev.com/java-interview-questions" itemprop="url"><span itemprop="name">Java Interview Questions</span></a></li>
+	<li id="menu-item-7623" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7623"><a href="https://www.journaldev.com/2529/jdbc-interview-questions-and-answers" itemprop="url"><span itemprop="name">JDBC Interview Questions</span></a></li>
+	<li id="menu-item-7624" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7624"><a href="https://www.journaldev.com/2015/servlet-interview-questions-and-answers" itemprop="url"><span itemprop="name">Servlet Interview Questions</span></a></li>
+	<li id="menu-item-7625" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7625"><a href="https://www.journaldev.com/2110/jsp-interview-questions-and-answers" itemprop="url"><span itemprop="name">JSP Interview Questions</span></a></li>
+	<li id="menu-item-7626" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7626"><a href="https://www.journaldev.com/2354/struts2-interview-questions-and-answers" itemprop="url"><span itemprop="name">Struts2 Interview Questions</span></a></li>
+	<li id="menu-item-7627" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7627"><a href="https://www.journaldev.com/2696/spring-interview-questions-and-answers" itemprop="url"><span itemprop="name">Spring Interview Questions</span></a></li>
+	<li id="menu-item-7628" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7628"><a href="https://www.journaldev.com/3633/hibernate-interview-questions-and-answers" itemprop="url"><span itemprop="name">Hibernate Interview Questions</span></a></li>
+	<li id="menu-item-7629" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7629"><a href="https://www.journaldev.com/7261/jsf-interview-questions-and-answers" itemprop="url"><span itemprop="name">JSF Interview Questions</span></a></li>
+</ul>
+</li>
+<li id="menu-item-17037" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17037"><a href="https://www.journaldev.com/resources" itemprop="url"><span itemprop="name">Resources</span></a></li>
+<li id="menu-item-17772" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17772"><a href="https://www.journaldev.com/hire-me" itemprop="url"><span itemprop="name">Hire Me</span></a></li>
+<li id="menu-item-18065" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18065"><a href="https://www.journaldev.com/android-app" itemprop="url"><span itemprop="name">Download Android App</span></a></li>
+<li id="menu-item-18187" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18187"><a href="https://www.journaldev.com/write-for-us" itemprop="url"><span itemprop="name">Contribute</span></a></li>
+</ul></div></nav>	
+	<div class="wrapper mailchimp">
+        <div class="box"> 
+            <form action="https://journaldev.us8.list-manage.com/subscribe/post-json?u=612f3d966c86000f37699d8cf&amp;id=c64db63284&amp;SIGNUP=TOP_HEADER&amp;c=?" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
+				<span>
+					SIGN UP TO RECIEVE OUR UPDATES VIA EMAIL
+				</span>
+				<div class="main_inputs">	
+				<input type="text" value="" name="FNAME" class="name" id="mce-name" placeholder="Full name" required="">
+				
+				<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="name@example.com" required="">
+				
+                <input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="mc-button">
+				</div>
+				
+				 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_612f3d966c86000f37699d8cf_c64db63284" tabindex="-1" value=""></div>
+    <div class="clear"></div>
+				
+            </form>
+                <div id="subscribe-result" style="display: none">
+					<p>Thank you for subscribing. We have sent you a confirmation email.</p>
+                </div>
+        </div>
+    </div>
+	
+
+	<script>
+		var $ = jQuery;
+		$(document).ready(function () {
+  var $form = $('#mc-embedded-subscribe-form');
+  if ($form.length > 0) {
+    $('#mc-embedded-subscribe-form input[type="submit"]').bind('click', function (event) {
+      if (event) event.preventDefault();
+      mailchimp_email_register($form);
+    })
+  }
+})
+		
+function mc_validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+function mailchimp_email_register($form) {
+	if(mc_validateEmail($("#mce-EMAIL").val() )) {
+		$('#mc-embedded-subscribe').val('Sending...');
+		$.ajax({
+			type: $form.attr('method'),
+			url: $form.attr('action'),
+			data: $form.serialize(),
+			cache: false,
+			dataType: 'json',
+			contentType: 'application/json; charset=utf-8',
+			error: function (err) { alert('Could not connect to the registration server. Please try again later.') },
+			success: function (data) {
+				$('#mc-embedded-subscribe').val('subscribe');
+				if (data.result === 'success') {
+					console.log(data.msg);
+					$('#mce-EMAIL').css('borderColor', '#ffffff');
+					$('#subscribe-result').css('color', 'rgb(53, 114, 210)');
+					$('#mc-embedded-subscribe-form').fadeOut(300);
+					$('#subscribe-result').fadeIn(300);
+					document.cookie = "subscribed=true; expires=Thu, 18 Dec 2050 12:00:00 UTC;domain=;path=/";
+					$('#mce-EMAIL').val('');
+					$('#mce-name').val('');
+				} else {
+					console.log(data.msg)
+					alert("You have already subscribed! Please try with different email.");
+				}
+			}
+		});
+	} else {
+		alert("Please enter a valid email");
+	}
+};
+	</script>
+
+<div class="site-inner"><div class="content-sidebar-wrap"><main class="content"><div class="breadcrumb" itemscope="" itemtype="https://schema.org/BreadcrumbList"><span><span><a href="https://www.journaldev.com/">Home</a> » <span><a href="https://www.journaldev.com/android">Android</a> » <span class="breadcrumb_last">Android Date Time Picker Dialog</span></span></span></span></div><article class="post-9976 post type-post status-publish format-standard category-android entry" itemscope="" itemtype="https://schema.org/CreativeWork"><header class="entry-header"><h1 class="entry-title" itemprop="headline">Android Date Time Picker Dialog</h1>
+<p class="entry-meta"><time class="entry-modified-time" itemprop="dateModified" datetime="2018-04-02T07:48:52+00:00">April 2, 2018</time> by <span class="entry-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person"><a href="https://www.journaldev.com/author/anupam" class="entry-author-link" itemprop="url" rel="author"><span class="entry-author-name" itemprop="name">Anupam Chugh</span></a></span> <span class="entry-comments-link"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comments">33 Comments</a></span> </p></header><div class="entry-content" itemprop="text"><!-- Quick Adsense WordPress Plugin: http://quickadsense.com/ -->
+<div style="float: none; margin:10px 0 10px 0; text-align:center;">
+<div data-type="ad" data-publisher="journaldev.com" data-zone="jd_after_entry_728x90" data-format="728x90"> </div>
+</div>
+<p>Android Date Time picker are used a lot in android apps. In this tutorial we’ll demonstrate the use of a <strong>Date Picker</strong> and <strong>Timer Picker</strong> Dialog in our android application. These components are used to select date and time in a customised user interface. We will use <code>DatePickerDialog</code> and <code>TimePickerDialog</code> classes with <code>Calendar</code> class in our android application code to achieve this.</p>
+<h3>Android DatePickerDialog and TimePickerDialog</h3>
+<p>Though a Date Picker and Time Picker can be used as independent widgets but they occupy more space on the screen. Hence using them inside a Dialog is a better choice. Fortunately android provides use with its own DatePickerDialog and TimePickerDialog classes.</p>
+<p><strong>DatePickerDialog</strong> and <strong>TimePickerDialog</strong> classes have <code>onDateSetListener()</code> and <code>onTimeSetListener()</code> callback methods respectively. These callback methods are invoked when the user is done with filling the date and time respectively.</p>
+<p>The DatePickerDialog class consists of a 5 argument constructor with the parameters listed below.</p>
+<ol>
+<li><strong>Context</strong>: It requires the application context</li>
+<li><strong>CallBack Function</strong>: <code>onDateSet()</code> is invoked when the user sets the date with the following parameters:</li>
+<ul>
+<li>int year : It will be store the current selected year from the dialog</li>
+<li>int monthOfYear : It will be store the current selected month from the dialog</li>
+<li>int dayOfMonth : It will be store the current selected day from the dialog</li>
+</ul>
+<li><strong>int mYear</strong> : It shows the the current year that’s visible when the dialog pops up</li>
+<li><strong>int mMonth</strong> : It shows the the current month that’s visible when the dialog pops up</li>
+<li><strong>int mDay</strong> : It shows the the current day that’s visible when the dialog pops up</li>
+</ol>
+<p>The TimePickerDialog class consists of a 5 argument constructor with the parameters listed below.</p>
+<ol>
+<li><strong>Context</strong>: It requires the application context</li>
+<li><strong>CallBack Function</strong>: <code>onTimeSet()</code> is invoked when the user sets the time with the following parameters:</li>
+<ul>
+<li>int hourOfDay : It will be store the current selected hour of the day from the dialog</li>
+<li>int minute : It will be store the current selected minute from the dialog</li>
+</ul>
+<li><strong>int mHours</strong> : It shows the the current Hour that’s visible when the dialog pops up</li>
+<li><strong>int mMinute</strong> : It shows the the current minute that’s visible when the dialog pops up</li>
+<li><strong>boolean false</strong> : If its set to false it will show the time in 24 hour format else not</li>
+</ol>
+<h3>Android Date Time Picker Example Project Structure</h3>
+<p><a href="https://cdn.journaldev.com/wp-content/uploads/2015/12/android-date-time-picker-dialog-project.png" rel="attachment wp-att-9989"><img src="./Android Date Time Picker Dialog - JournalDev_files/android-date-time-picker-dialog-project-323x450.png" alt="android date time picker, android TimePickerDialog, android DatePickerDialog" width="323" height="450" class="aligncenter size-medium wp-image-9989" srcset="//cdn.journaldev.com/wp-content/uploads/2015/12/android-date-time-picker-dialog-project-323x450.png 323w, //cdn.journaldev.com/wp-content/uploads/2015/12/android-date-time-picker-dialog-project-14x20.png 14w, //cdn.journaldev.com/wp-content/uploads/2015/12/android-date-time-picker-dialog-project.png 464w" sizes="(max-width: 323px) 100vw, 323px"></a></p>
+<!-- Quick Adsense WordPress Plugin: http://quickadsense.com/ -->
+<div style="float: none; margin:10px 0 10px 0; text-align:center;">
+<div data-type="ad" data-publisher="journaldev.com" data-format="300x250" data-zone="jd_post_mid_300x250"></div>
+</div>
+
+<h3>Android Date Time Picker Dialog Project Code</h3>
+<p>The <code>activity_main.xml</code> consists of two buttons to invoke the Date and Time Picker Dialogs and set the user selected time in the two EditText views. The xml code is given below.</p>
+<p><code>activity_main.xml</code></p>
+<!-- Quick Adsense WordPress Plugin: http://quickadsense.com/ -->
+<div style="float: none; margin:10px 0 10px 0; text-align:center;">
+<div data-type="ad" data-publisher="journaldev.com" data-zone="jd_leaderboard_728x90" data-format="728x90"> </div>
+</div>
+
+<pre style="display: block;"><code class="hljs xml"><div class="re_clip-board" style="display: none;">Copy</div>
+<span class="hljs-tag">&lt;<span class="hljs-name">RelativeLayout</span> <span class="hljs-attr">xmlns:android</span>=<span class="hljs-string">"http://schemas.android.com/apk/res/android"</span>
+    <span class="hljs-attr">xmlns:tools</span>=<span class="hljs-string">"http://schemas.android.com/tools"</span> <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">"match_parent"</span>
+    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">"match_parent"</span> <span class="hljs-attr">android:paddingLeft</span>=<span class="hljs-string">"@dimen/activity_horizontal_margin"</span>
+    <span class="hljs-attr">android:paddingRight</span>=<span class="hljs-string">"@dimen/activity_horizontal_margin"</span>
+    <span class="hljs-attr">android:paddingTop</span>=<span class="hljs-string">"@dimen/activity_vertical_margin"</span>
+    <span class="hljs-attr">android:paddingBottom</span>=<span class="hljs-string">"@dimen/activity_vertical_margin"</span> <span class="hljs-attr">tools:context</span>=<span class="hljs-string">".MainActivity"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">EditText</span>
+        <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">"200dp"</span>
+        <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">"wrap_content"</span>
+        <span class="hljs-attr">android:id</span>=<span class="hljs-string">"@+id/in_date"</span>
+        <span class="hljs-attr">android:layout_marginTop</span>=<span class="hljs-string">"82dp"</span>
+        <span class="hljs-attr">android:layout_alignParentTop</span>=<span class="hljs-string">"true"</span>
+        <span class="hljs-attr">android:layout_alignParentLeft</span>=<span class="hljs-string">"true"</span>
+        <span class="hljs-attr">android:layout_alignParentStart</span>=<span class="hljs-string">"true"</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">Button</span>
+        <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">"wrap_content"</span>
+        <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">"wrap_content"</span>
+        <span class="hljs-attr">android:text</span>=<span class="hljs-string">"SELECT DATE"</span>
+        <span class="hljs-attr">android:id</span>=<span class="hljs-string">"@+id/btn_date"</span>
+        <span class="hljs-attr">android:layout_alignBottom</span>=<span class="hljs-string">"@+id/in_date"</span>
+        <span class="hljs-attr">android:layout_toRightOf</span>=<span class="hljs-string">"@+id/in_date"</span>
+        <span class="hljs-attr">android:layout_toEndOf</span>=<span class="hljs-string">"@+id/in_date"</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">EditText</span>
+        <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">"200dp"</span>
+        <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">"wrap_content"</span>
+        <span class="hljs-attr">android:id</span>=<span class="hljs-string">"@+id/in_time"</span>
+        <span class="hljs-attr">android:layout_below</span>=<span class="hljs-string">"@+id/in_date"</span>
+        <span class="hljs-attr">android:layout_alignParentLeft</span>=<span class="hljs-string">"true"</span>
+        <span class="hljs-attr">android:layout_alignParentStart</span>=<span class="hljs-string">"true"</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">Button</span>
+        <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">"wrap_content"</span>
+        <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">"wrap_content"</span>
+        <span class="hljs-attr">android:text</span>=<span class="hljs-string">"SELECT TIME"</span>
+        <span class="hljs-attr">android:id</span>=<span class="hljs-string">"@+id/btn_time"</span>
+        <span class="hljs-attr">android:layout_below</span>=<span class="hljs-string">"@+id/btn_date"</span>
+        <span class="hljs-attr">android:layout_alignLeft</span>=<span class="hljs-string">"@+id/btn_date"</span>
+        <span class="hljs-attr">android:layout_alignStart</span>=<span class="hljs-string">"@+id/btn_date"</span> /&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">RelativeLayout</span>&gt;</span>
+</code></pre>
+<p>The <code>MainActivity.java</code> class is given below:</p>
+<pre style="display: block;"><code class="hljs java"><div class="re_clip-board" style="display: block;">Copy</div>
+<span class="hljs-keyword">package</span> com.journaldev.datetimepickerdialog;
+
+<span class="hljs-keyword">import</span> android.app.DatePickerDialog;
+<span class="hljs-keyword">import</span> android.app.TimePickerDialog;
+<span class="hljs-keyword">import</span> android.support.v7.app.AppCompatActivity;
+<span class="hljs-keyword">import</span> android.os.Bundle;
+<span class="hljs-keyword">import</span> android.view.Menu;
+<span class="hljs-keyword">import</span> android.view.MenuItem;
+<span class="hljs-keyword">import</span> android.view.View;
+<span class="hljs-keyword">import</span> android.widget.Button;
+<span class="hljs-keyword">import</span> android.widget.DatePicker;
+<span class="hljs-keyword">import</span> android.widget.EditText;
+<span class="hljs-keyword">import</span> android.widget.TimePicker;
+
+<span class="hljs-keyword">import</span> java.util.Calendar;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AppCompatActivity</span> <span class="hljs-keyword">implements</span>
+        <span class="hljs-title">View</span>.<span class="hljs-title">OnClickListener</span> </span>{
+
+    Button btnDatePicker, btnTimePicker;
+    EditText txtDate, txtTime;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> mYear, mMonth, mDay, mHour, mMinute;
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
+        <span class="hljs-keyword">super</span>.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        btnDatePicker=(Button)findViewById(R.id.btn_date);
+        btnTimePicker=(Button)findViewById(R.id.btn_time);
+        txtDate=(EditText)findViewById(R.id.in_date);
+        txtTime=(EditText)findViewById(R.id.in_time);
+
+        btnDatePicker.setOnClickListener(<span class="hljs-keyword">this</span>);
+        btnTimePicker.setOnClickListener(<span class="hljs-keyword">this</span>);
+
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onClick</span><span class="hljs-params">(View v)</span> </span>{
+
+        <span class="hljs-keyword">if</span> (v == btnDatePicker) {
+
+            <span class="hljs-comment">// Get Current Date</span>
+            <span class="hljs-keyword">final</span> Calendar c = Calendar.getInstance();
+            mYear = c.get(Calendar.YEAR);
+            mMonth = c.get(Calendar.MONTH);
+            mDay = c.get(Calendar.DAY_OF_MONTH);
+
+
+            DatePickerDialog datePickerDialog = <span class="hljs-keyword">new</span> DatePickerDialog(<span class="hljs-keyword">this</span>,
+                    <span class="hljs-keyword">new</span> DatePickerDialog.OnDateSetListener() {
+
+                        <span class="hljs-meta">@Override</span>
+                        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDateSet</span><span class="hljs-params">(DatePicker view, <span class="hljs-keyword">int</span> year,
+                                              <span class="hljs-keyword">int</span> monthOfYear, <span class="hljs-keyword">int</span> dayOfMonth)</span> </span>{
+
+                            txtDate.setText(dayOfMonth + <span class="hljs-string">"-"</span> + (monthOfYear + <span class="hljs-number">1</span>) + <span class="hljs-string">"-"</span> + year);
+
+                        }
+                    }, mYear, mMonth, mDay);
+            datePickerDialog.show();
+        }
+        <span class="hljs-keyword">if</span> (v == btnTimePicker) {
+
+            <span class="hljs-comment">// Get Current Time</span>
+            <span class="hljs-keyword">final</span> Calendar c = Calendar.getInstance();
+            mHour = c.get(Calendar.HOUR_OF_DAY);
+            mMinute = c.get(Calendar.MINUTE);
+
+            <span class="hljs-comment">// Launch Time Picker Dialog</span>
+            TimePickerDialog timePickerDialog = <span class="hljs-keyword">new</span> TimePickerDialog(<span class="hljs-keyword">this</span>,
+                    <span class="hljs-keyword">new</span> TimePickerDialog.OnTimeSetListener() {
+
+                        <span class="hljs-meta">@Override</span>
+                        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onTimeSet</span><span class="hljs-params">(TimePicker view, <span class="hljs-keyword">int</span> hourOfDay,
+                                              <span class="hljs-keyword">int</span> minute)</span> </span>{
+
+                            txtTime.setText(hourOfDay + <span class="hljs-string">":"</span> + minute);
+                        }
+                    }, mHour, mMinute, <span class="hljs-keyword">false</span>);
+            timePickerDialog.show();
+        }
+    }
+}
+</code></pre>
+<p>In the above code we’ve created a Calendar object using <code>Calendar.getInstance()</code> to display the current date and time using the respective static fields. </p>
+<p><strong>Note</strong>: The display calendar and clock are the default UI themes as provided in the AppCompat Theme. </p>
+<!-- Quick Adsense WordPress Plugin: http://quickadsense.com/ -->
+<div style="float: none; margin:10px 0 10px 0; text-align:center;">
+<!-- CM_JD_AP_Middle_Responsive -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5143693538742787" data-ad-slot="7174295726" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Below is the output produced by our android date time picker example application.</p>
+<p><a href="./Android Date Time Picker Dialog - JournalDev_files/android-date-time-picker-output.gif" rel="attachment wp-att-9995"><img src="./Android Date Time Picker Dialog - JournalDev_files/android-date-time-picker-output.gif" alt="android date time picker example" width="375" height="588" class="aligncenter size-full wp-image-9995"></a></p>
+<p>This brings an end to android date time picker dialog example tutorial. You can download the final <strong>Android DateTimePickerDialog Project</strong> from the below link.</p>
+<div class="download-box"><a href="https://www.journaldev.com/wp-content/uploads/android/DateTimePickerDialog.zip" target="_blank">Download Android Date Time Picker Project</a></div>
+
+<!-- Quick Adsense WordPress Plugin: http://quickadsense.com/ -->
+<div style="float: none; margin:0px 0 0px 0; text-align:center;">
+<script async="" src="./Android Date Time Picker Dialog - JournalDev_files/f.txt"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-5143693538742787" data-ad-slot="3941417857"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<div style="font-size: 0px; height: 0px; line-height: 0px; margin: 0; padding: 0; clear: both;"></div><div class="scriptlesssocialsharing"><div class="scriptlesssocialsharing-buttons"><a class="button twitter" target="_blank" href="https://twitter.com/intent/tweet?text=Android%20Date%20Time%20Picker%20Dialog&amp;url=https%3A%2F%2Fwww.journaldev.com%2F9976%2Fandroid-date-time-picker-dialog&amp;via=JournalDev&amp;related=JournalDev" rel="noopener"><span class="sss-name">Twitter</span></a><a class="button facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.journaldev.com%2F9976%2Fandroid-date-time-picker-dialog" rel="noopener"><span class="sss-name">Facebook</span></a><a class="button linkedin" target="_blank" href="https://www.linkedin.com/shareArticle?mini=1&amp;url=https%3A%2F%2Fwww.journaldev.com%2F9976%2Fandroid-date-time-picker-dialog&amp;title=Android%20Date%20Time%20Picker%20Dialog&amp;source=https://www.journaldev.com" rel="noopener"><span class="sss-name">Linkedin</span></a><a class="button email" target="_blank" href="mailto:?body=I%20read%20this%20post%20and%20wanted%20to%20share%20it%20with%20you.%20Here%27s%20the%20link:%20https%3A%2F%2Fwww.journaldev.com%2F9976%2Fandroid-date-time-picker-dialog&amp;subject=A%20post%20worth%20sharing:%20Android%20Date%20Time%20Picker%20Dialog" rel="noopener"><span class="sss-name">Email</span></a></div></div><div class="prev-next-navigation"><a href="https://www.journaldev.com/9942/android-expandablelistview-example-tutorial" rel="prev"><div class="previous"><span class="prev_icon">&nbsp;Previous </span><br> <span class="pagi_content">Android ExpandableListView Example Tutorial</span></div></a><a href="https://www.journaldev.com/10024/android-recyclerview-android-cardview-example-tutorial" rel="next"><div class="next"><span class="next_icon">Next&nbsp;</span><br> <span class="pagi_content">Android RecyclerView, Android CardView Example Tutorial</span></div></a></div>
+		<!-- .prev-next-navigation --><section class="author-box" itemprop="author" itemscope="" itemtype="https://schema.org/Person"><h4 class="author-box-title">About <span itemprop="name">Anupam Chugh</span></h4><div class="author-box-content" itemprop="description"><p>He loves learning new stuff in Android and iOS. Shoot him queries.</p>
+</div></section></div><footer class="entry-footer"><p class="entry-meta"><span class="entry-categories">Filed Under: <a href="https://www.journaldev.com/android" rel="category tag">Android</a></span> </p></footer></article><div class="adjacent-entry-pagination pagination"><div class="pagination-previous alignleft"><a href="https://www.journaldev.com/9942/android-expandablelistview-example-tutorial" rel="prev">« Android ExpandableListView Example Tutorial</a></div><div class="pagination-next alignright"><a href="https://www.journaldev.com/10024/android-recyclerview-android-cardview-example-tutorial" rel="next">Android RecyclerView, Android CardView Example Tutorial »</a></div></div><div class="entry-comments" id="comments"><h3>Comments</h3><ol class="comment-list">
+	<li class="comment even thread-even depth-1" id="comment-43652">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">Ghufran</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2018-06-12T06:14:53+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-43652" class="comment-time-link" itemprop="url">June 12, 2018 at 6:14 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Very Helpful. Thank you</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-43652" onclick="return addComment.moveForm( &quot;comment-43652&quot;, &quot;43652&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to Ghufran">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-43216">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">Ryan Kraetsch</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2018-04-29T10:46:47+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-43216" class="comment-time-link" itemprop="url">April 29, 2018 at 10:46 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>this is badly designed. the year needs to be set in a different field from the month or you have to tap on the screen for 10-15 minutes to go back to the average DOB.</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-43216" onclick="return addComment.moveForm( &quot;comment-43216&quot;, &quot;43216&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to Ryan Kraetsch">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="comment-43185">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">Abhijeet</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2018-04-25T23:32:59+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-43185" class="comment-time-link" itemprop="url">April 25, 2018 at 11:32 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Great Help Anupam 🙂</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-43185" onclick="return addComment.moveForm( &quot;comment-43185&quot;, &quot;43185&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to Abhijeet">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-42082">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">bhati manish</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2018-01-22T23:36:31+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-42082" class="comment-time-link" itemprop="url">January 22, 2018 at 11:36 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Thanx It Helped me</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-42082" onclick="return addComment.moveForm( &quot;comment-42082&quot;, &quot;42082&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to bhati manish">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="comment-42078">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">gaurav Meghanahthi</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2018-01-22T03:49:33+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-42078" class="comment-time-link" itemprop="url">January 22, 2018 at 3:49 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>is there is a way to open datepicker dialog as a yearlist view first then month  then day</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-42078" onclick="return addComment.moveForm( &quot;comment-42078&quot;, &quot;42078&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to gaurav Meghanahthi">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-40068">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">Sanjay</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-11-28T21:12:14+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-40068" class="comment-time-link" itemprop="url">November 28, 2017 at 9:12 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Awesome !</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-40068" onclick="return addComment.moveForm( &quot;comment-40068&quot;, &quot;40068&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to Sanjay">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="comment-38624">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">Pkvarnwal</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-07-12T04:18:32+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-38624" class="comment-time-link" itemprop="url">July 12, 2017 at 4:18 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Very helpfull</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-38624" onclick="return addComment.moveForm( &quot;comment-38624&quot;, &quot;38624&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to Pkvarnwal">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-38042">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">sachin</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-04-28T05:31:24+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-38042" class="comment-time-link" itemprop="url">April 28, 2017 at 5:31 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>i want  to know how to  use start date to  end date date picker in android fragment and condition is that end date date picker should be greater than start date  datepicker  can anybody help me</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-38042" onclick="return addComment.moveForm( &quot;comment-38042&quot;, &quot;38042&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to sachin">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="comment-37988">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">BHAWANI SINGH</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-04-22T05:31:33+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37988" class="comment-time-link" itemprop="url">April 22, 2017 at 5:31 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>TimePickerDailog.show();<br>
+DatePickerDailog.show();<br>
+Both are showing error …??</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37988" onclick="return addComment.moveForm( &quot;comment-37988&quot;, &quot;37988&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to BHAWANI SINGH">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-37827">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">Natraj</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-03-30T21:59:59+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37827" class="comment-time-link" itemprop="url">March 30, 2017 at 9:59 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>I want to set the am and pm in the Timepicker field. can you please let me know how to set it.</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37827" onclick="return addComment.moveForm( &quot;comment-37827&quot;, &quot;37827&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to Natraj">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="comment-37751">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">rajender</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-03-20T22:45:20+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37751" class="comment-time-link" itemprop="url">March 20, 2017 at 10:45 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>thanks so much realy 2 nice work.</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37751" onclick="return addComment.moveForm( &quot;comment-37751&quot;, &quot;37751&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to rajender">Reply</a></div>
+		
+	</article>
+	<ul class="children">
+
+	<li class="comment byuser comment-author-anupam bypostauthor odd alt depth-2" id="comment-39126">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name"><a href="https://www.journaldev.com/" class="comment-author-link" rel="external nofollow" itemprop="url">Anupam Chugh</a></span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-08-16T04:39:32+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-39126" class="comment-time-link" itemprop="url">August 16, 2017 at 4:39 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Thanks, Rajender.</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-39126" onclick="return addComment.moveForm( &quot;comment-39126&quot;, &quot;39126&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to Anupam Chugh">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-37639">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">nehal</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-03-03T05:04:40+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37639" class="comment-time-link" itemprop="url">March 3, 2017 at 5:04 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>datePickerDialog.show(); showing error..please help</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37639" onclick="return addComment.moveForm( &quot;comment-37639&quot;, &quot;37639&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to nehal">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-37502">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">p</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-02-16T22:51:27+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37502" class="comment-time-link" itemprop="url">February 16, 2017 at 10:51 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Hey, Thank You!  Its really helpful. saved my time.</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37502" onclick="return addComment.moveForm( &quot;comment-37502&quot;, &quot;37502&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to p">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-37355">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">swathi</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-01-29T20:47:20+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37355" class="comment-time-link" itemprop="url">January 29, 2017 at 8:47 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>hi i got error at c.get() method as “Call requires API level 24 (current min is 15)”</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37355" onclick="return addComment.moveForm( &quot;comment-37355&quot;, &quot;37355&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to swathi">Reply</a></div>
+		
+	</article>
+	<ul class="children">
+
+	<li class="comment odd alt depth-2" id="comment-37789">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">BLYA SUKA IDI SUDA</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-03-26T08:54:29+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37789" class="comment-time-link" itemprop="url">March 26, 2017 at 8:54 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Just clean ur project or rebuild</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37789" onclick="return addComment.moveForm( &quot;comment-37789&quot;, &quot;37789&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to BLYA SUKA IDI SUDA">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="comment-37314">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">vamsi</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-01-23T01:31:15+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37314" class="comment-time-link" itemprop="url">January 23, 2017 at 1:31 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Hi, I have created a date picker dialog and passed a custom year,date,day (ex, I have passed Feb, 2nd, 2016) .It shows me Feb 2nd is highlighted in all years. How can I avoid that and show Feb 2nd selected only in 2016.</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37314" onclick="return addComment.moveForm( &quot;comment-37314&quot;, &quot;37314&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to vamsi">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-37225">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">Joy</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-01-09T11:20:27+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37225" class="comment-time-link" itemprop="url">January 9, 2017 at 11:20 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>To allow only the days to come to be clickable and making previous days unclickable..!!how to do that in this?</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37225" onclick="return addComment.moveForm( &quot;comment-37225&quot;, &quot;37225&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to Joy">Reply</a></div>
+		
+	</article>
+	<ul class="children">
+
+	<li class="comment byuser comment-author-anupam bypostauthor even depth-2" id="comment-37226">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name"><a href="https://www.journaldev.com/" class="comment-author-link" rel="external nofollow" itemprop="url">Anupam Chugh</a></span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-01-09T12:26:56+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37226" class="comment-time-link" itemprop="url">January 9, 2017 at 12:26 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Hi,<br>
+To display previous dates, add this line of code:</p>
+<p>datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() – 1000);</p>
+<p>Thanks</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37226" onclick="return addComment.moveForm( &quot;comment-37226&quot;, &quot;37226&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to Anupam Chugh">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-37053">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">Monali Khairnar</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2016-12-14T23:05:04+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37053" class="comment-time-link" itemprop="url">December 14, 2016 at 11:05 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>How to display the time in 24 hours? Currently it is showing 12 hours format and i want 24 hours format..</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37053" onclick="return addComment.moveForm( &quot;comment-37053&quot;, &quot;37053&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to Monali Khairnar">Reply</a></div>
+		
+	</article>
+	<ul class="children">
+
+	<li class="comment byuser comment-author-anupam bypostauthor even depth-2" id="comment-37227">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name"><a href="https://www.journaldev.com/" class="comment-author-link" rel="external nofollow" itemprop="url">Anupam Chugh</a></span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2017-01-09T12:32:20+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37227" class="comment-time-link" itemprop="url">January 9, 2017 at 12:32 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Hi,<br>
+Change the last parameter is24hourView from false to true as shown below.</p>
+<p>TimePickerDialog timePickerDialog = new TimePickerDialog(this,<br>
+                    new TimePickerDialog.OnTimeSetListener() {</p>
+<p>                        @Override<br>
+                        public void onTimeSet(TimePicker view, int hourOfDay,<br>
+                                              int minute) {</p>
+<p>                            txtTime.setText(hourOfDay + “:” + minute);<br>
+                        }<br>
+                    }, mHour, mMinute, true);</p>
+<p>Thanks</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-37227" onclick="return addComment.moveForm( &quot;comment-37227&quot;, &quot;37227&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to Anupam Chugh">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-36811">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">dan</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2016-11-10T20:25:36+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-36811" class="comment-time-link" itemprop="url">November 10, 2016 at 8:25 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>how to convert month from int to name? (eg. 1 -&gt; january, 2 -&gt; february), any idea from adding if else ?, great tutorial btw, works perfectly on me</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-36811" onclick="return addComment.moveForm( &quot;comment-36811&quot;, &quot;36811&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to dan">Reply</a></div>
+		
+	</article>
+	<ul class="children">
+
+	<li class="comment byuser comment-author-anupam bypostauthor even depth-2" id="comment-36931">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name"><a href="https://www.journaldev.com/" class="comment-author-link" rel="external nofollow" itemprop="url">Anupam Chugh</a></span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2016-11-27T22:36:56+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-36931" class="comment-time-link" itemprop="url">November 27, 2016 at 10:36 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Hi dan,<br>
+Use enums.</p>
+<p>Thanks</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-36931" onclick="return addComment.moveForm( &quot;comment-36931&quot;, &quot;36931&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to Anupam Chugh">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-36750">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">Shai</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2016-11-03T01:33:08+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-36750" class="comment-time-link" itemprop="url">November 3, 2016 at 1:33 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Thanks for so easy and very useful tutorial!</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-36750" onclick="return addComment.moveForm( &quot;comment-36750&quot;, &quot;36750&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to Shai">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-36429">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">gaurav</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2016-09-26T03:37:13+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-36429" class="comment-time-link" itemprop="url">September 26, 2016 at 3:37 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>how to disable past date  and time ??</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-36429" onclick="return addComment.moveForm( &quot;comment-36429&quot;, &quot;36429&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to gaurav">Reply</a></div>
+		
+	</article>
+	<ul class="children">
+
+	<li class="comment odd alt depth-2" id="comment-36934">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">saiumesh</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2016-11-28T00:31:13+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-36934" class="comment-time-link" itemprop="url">November 28, 2016 at 12:31 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() – 1000);</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-36934" onclick="return addComment.moveForm( &quot;comment-36934&quot;, &quot;36934&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to saiumesh">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="comment-36253">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">Matheus Soares</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2016-09-07T15:21:57+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-36253" class="comment-time-link" itemprop="url">September 7, 2016 at 3:21 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Thank you very much!! Easier than the all examples i found.</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-36253" onclick="return addComment.moveForm( &quot;comment-36253&quot;, &quot;36253&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to Matheus Soares">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-36079">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">PeterOla</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2016-08-19T03:38:48+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-36079" class="comment-time-link" itemprop="url">August 19, 2016 at 3:38 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Thanks for this.<br>
+Works perfect</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-36079" onclick="return addComment.moveForm( &quot;comment-36079&quot;, &quot;36079&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to PeterOla">Reply</a></div>
+		
+	</article>
+	<ul class="children">
+
+	<li class="comment even depth-2" id="comment-36165">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">Suman Mondal</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2016-08-27T15:49:36+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-36165" class="comment-time-link" itemprop="url">August 27, 2016 at 3:49 pm</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>timePickerDialog.show(); showing error..please help</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-36165" onclick="return addComment.moveForm( &quot;comment-36165&quot;, &quot;36165&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to Suman Mondal">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-35830">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">kholio</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2016-07-22T02:16:24+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-35830" class="comment-time-link" itemprop="url">July 22, 2016 at 2:16 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Hi,<br>
+I have copied these codes in my android project. the layout is correctly displayed but when I copy the java file It dosen’t work</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-35830" onclick="return addComment.moveForm( &quot;comment-35830&quot;, &quot;35830&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to kholio">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-34320">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">Mario German</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2016-03-18T10:05:52+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-34320" class="comment-time-link" itemprop="url">March 18, 2016 at 10:05 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>Hi Anupam: Good Tutorial, I have the following question, I have an application where I want me to be the administrator of the calendar in which users enter and to request an appointment, but only I can accept and you get a message to users if it was or not accepted the appointment. I appreciate all your help and support.</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-34320" onclick="return addComment.moveForm( &quot;comment-34320&quot;, &quot;34320&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to Mario German">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-34162">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">Frederik Skytte</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2016-02-23T03:43:49+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-34162" class="comment-time-link" itemprop="url">February 23, 2016 at 3:43 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>A much simpler soultion than Googles examples with FragmentDialogs. Thanks!</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-34162" onclick="return addComment.moveForm( &quot;comment-34162&quot;, &quot;34162&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to Frederik Skytte">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-34119">
+	<article itemprop="comment" itemscope="" itemtype="https://schema.org/Comment">
+
+		
+		<header class="comment-header">
+			<p class="comment-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+				<span itemprop="name">Araz</span> <span class="says">says</span>			</p>
+
+			<p class="comment-meta"><time class="comment-time" datetime="2016-02-17T10:04:32+00:00" itemprop="datePublished"><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-34119" class="comment-time-link" itemprop="url">February 17, 2016 at 10:04 am</a></time></p>		</header>
+
+		<div class="comment-content" itemprop="text">
+			
+			<p>F*****g thank you! been googling for 3 hours and every other tutorial was either deprecated or vague and complex. this one i did it 5 mins and it worked perfectly.</p>
+		</div>
+
+		<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#comment-34119" onclick="return addComment.moveForm( &quot;comment-34119&quot;, &quot;34119&quot;, &quot;respond&quot;, &quot;9976&quot; )" aria-label="Reply to Araz">Reply</a></div>
+		
+	</article>
+	</li><!-- #comment-## -->
+</ol></div>	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://www.journaldev.com/9976/android-date-time-picker-dialog#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://www.journaldev.com/wp-comments-post.php" method="post" id="commentform" class="comment-form anti-spam-form-processed" novalidate="">
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"><label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="9976" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+<!-- Anti-spam plugin v.5.2 wordpress.org/plugins/anti-spam/ -->
+		<p class="antispam-group antispam-group-q" style="clear: both; display: none;">
+			<label>Current ye@r <span class="required">*</span></label>
+			<input type="hidden" name="antspm-a" class="antispam-control antispam-control-a" value="2018">
+			<input type="text" name="antspm-q" class="antispam-control antispam-control-q" value="5.2" autocomplete="off">
+		</p>
+		<p class="antispam-group antispam-group-e" style="display: none;">
+			<label>Leave this field empty</label>
+			<input type="text" name="antspm-e-email-url-website" class="antispam-control antispam-control-e" value="" autocomplete="off">
+		</p>
+			<input type="hidden" name="antspm-d" class="antispam-control antispam-control-d" value="2018"></form>
+			</div><!-- #respond -->
+	</main><aside class="sidebar sidebar-primary widget-area q2w3-fixed-widget-container" role="complementary" aria-label="Primary Sidebar" itemscope="" itemtype="https://schema.org/WPSideBar" style="height: 3340px;"><section id="search-3" class="widget widget_search"><div class="widget-wrap"><form class="search-form" itemprop="potentialAction" itemscope="" itemtype="https://schema.org/SearchAction" method="get" action="https://www.journaldev.com/" role="search"><meta itemprop="target" content="https://www.journaldev.com/?s={s}"><input itemprop="query-input" type="search" name="s" placeholder="Search for tutorials..."><input type="submit" value="Search"></form></div></section>
+
+<!-- Quick Adsense Wordpress Plugin: http://quickadsense.com/ -->
+<section id="adswidget5-quick-adsense-2" class="widget widget_adswidget5-quick-adsense"><div class="widget-wrap"><!-- jd_sidebar_responsive -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5143693538742787" data-ad-slot="9959852017" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></section>
+<section id="custom_html-7" class="widget_text widget widget_custom_html"><div class="widget_text widget-wrap"><h4 class="widget-title widgettitle">Download Android App</h4>
+<div class="textwidget custom-html-widget"><a href="https://www.journaldev.com/android-app-play-store" target="_blank" rel="noopener"><img src="./Android Date Time Picker Dialog - JournalDev_files/google-play-badge.png" width="336" height="130" alt="JournalDev Android App Play Store Link"></a></div></div></section>
+<section id="text-3" class="widget widget_text"><div class="widget-wrap"><h4 class="widget-title widgettitle">Android Tutorial</h4>
+			<div class="textwidget"><h4>Android Basics</h4>
+<ul>
+<li><a href="https://www.journaldev.com/8988/android-studio-tutorial-hello-world-app" target="_blank">Android Studio Tutorial</a></li>
+<li><a href="https://www.journaldev.com/9319/android-studio-project-structure-compiler-proguard" target="_blank">Android Studio Overview</a></li>
+<li><a href="https://www.journaldev.com/9044/android-intent-handling-between-activities-example-tutorial" target="_blank">Android Intent</a></li>
+<li><a href="https://www.journaldev.com/9231/android-spinner-drop-down-list" target="_blank">Android Spinner</a></li>
+<li><a href="https://www.journaldev.com/9247/android-listview-example-tutorial" target="_blank">Android ListView</a></li>
+<li><a href="https://www.journaldev.com/9266/android-fragment-lifecycle" target="_blank">Android Fragment Lifecycle</a></li>
+<li><a href="https://www.journaldev.com/14207/android-passing-data-between-fragments" target="_blank">Android Passing Data between Fragments</a></li>
+<li><a href="https://www.journaldev.com/9333/android-webview-example-tutorial" target="_blank">Android WebView</a></li>
+<li><a href="https://www.journaldev.com/9357/android-actionbar-example-tutorial" target="_blank">Android ActionBar</a></li>
+<li><a href="https://www.journaldev.com/9952/android-custom-action-bar-example-tutorial" target="_blank">Android Custom ActionBar</a></li>
+<li><a href="https://www.journaldev.com/9481/android-animation-example" target="_blank">Android Animation</a></li>
+<li><a href="https://www.journaldev.com/13270/android-capture-image-camera-gallery" target="_blank">Android Capture Image</a></li>
+<li><a href="https://www.journaldev.com/13291/android-custom-fonts-tutorial" target="_blank">Android Custom Fonts</a></li>
+<li><a href="https://www.journaldev.com/13325/android-location-api-tracking-gps" target="_blank">Android Location API GPS Tracking</a></li>
+<li><a href="https://www.journaldev.com/13347/android-location-google-play-services" target="_blank">Android Location Google Play Services</a></li>
+<li><a href="https://www.journaldev.com/12333/increase-gradle-build-speed" target="_blank">Android Increase Gradle Build Speed</a></li>
+<li><a href="https://www.journaldev.com/12648/navigationview-android" target="_blank">Android NavigationView</a></li>
+<li><a href="https://www.journaldev.com/12478/android-searchview-example-tutorial" target="_blank">Android SearchView</a></li>
+<li><a href="https://www.journaldev.com/13792/android-gridlayoutmanager-example" target="_blank">Android GridLayoutManager</a></li>
+<li><a href="https://www.journaldev.com/14886/android-mvp" target="_blank">Android MVP</a></li>
+<li><a href="https://www.journaldev.com/13759/android-picasso-tutorial" target="_blank">Android Picasso</a></li>
+<h4>Android Storage</h4>
+<li><a href="https://www.journaldev.com/9383/android-internal-storage-example-tutorial" target="_blank">Android Internal Storage</a></li>
+<li><a href="https://www.journaldev.com/9400/android-external-storage-read-write-save-file" target="_blank">Android External Storage</a></li>
+<li><a href="https://www.journaldev.com/9412/android-shared-preferences-example-tutorial" target="_blank">Android Shared Preferences</a></li>
+<li><a href="https://www.journaldev.com/9438/android-sqlite-database-example-tutorial" target="_blank">Android SQLite</a></li>
+<h4>Android Examples</h4>
+<li><a href="https://www.journaldev.com/10463/android-notification-pendingintent" target="_blank">Android Notification</a></li>
+<li><a href="https://www.journaldev.com/9463/android-alertdialog" target="_blank">Android AlertDialog</a></li>
+<li><a href="https://www.journaldev.com/9538/android-gridview-example" target="_blank">Android GridView</a></li>
+<li><a href="https://www.journaldev.com/9546/android-gallery-view-example-tutorial" target="_blank">Android Gallery View</a></li>
+<li><a href="https://www.journaldev.com/9652/android-progressdialog-example" target="_blank">Android ProgressDialog</a></li>
+<li><a href="https://www.journaldev.com/9708/android-asynctask-example-tutorial" target="_blank">Android AsyncTask</a></li>
+<li><a href="https://www.journaldev.com/10356/android-broadcastreceiver-example-tutorial" target="_blank">Android BroadcastReceiver</a></li>
+<li><a href="https://www.journaldev.com/10416/android-listview-with-custom-adapter-example-tutorial" target="_blank">Android ListView Custom Adapter</a></li>
+<li><a href="https://www.journaldev.com/10429/android-viewflipper-example-tutorial" target="_blank">Android ViewFlipper</a></li>
+<li><a href="https://www.journaldev.com/10439/android-butterknife-example" target="_blank">Android ButterKnife</a></li>
+<li><a href="https://www.journaldev.com/10444/android-custom-listview-non-scrollable" target="_blank">Android Non Scrollable ListView</a></li>
+<li><a href="https://www.journaldev.com/10642/android-jsonobject-json-parsing" target="_blank">Android JSONObject</a></li>
+<li><a href="https://www.journaldev.com/10653/android-xml-parser-xmlpullparser" target="_blank">Android XML Parser</a></li>
+<li><a href="https://www.journaldev.com/10409/android-runtime-permissions-example" target="_blank">Android Runtime Permissions</a></li>
+<li><a href="https://www.journaldev.com/11780/android-data-binding" target="_blank">Android Data Binding</a></li>
+<li><a href="https://www.journaldev.com/11950/android-data-binding-advanced-concepts" target="_blank">Android Data Binding Advanced</a></li>
+<li><a href="https://www.journaldev.com/13639/retrofit-android-example-tutorial" target="_blank">Retrofit Android</a></li>
+<li><a href="https://www.journaldev.com/13629/okhttp-android-example-tutorial" target="_blank">OkHttp Android</a></li>
+<li><a href="https://www.journaldev.com/12607/android-login-registration-php-mysql" target="_blank">Android Login Registration App</a></li>
+<li><a href="https://www.journaldev.com/10929/android-interview-questions-and-answers" target="_blank">Android Interview Questions</a></li>
+<li><a href="https://www.journaldev.com/14073/android-multi-search-filter-contacts" target="_blank">Android Multi Search</a></li>
+<h4>Android Layouts</h4>
+<li><a href="https://www.journaldev.com/9495/android-layout-linearlayout-relativelayout-example-tutorial" target="_blank">Android Layout LinearLayout</a></li>
+<li><a href="https://www.journaldev.com/9525/android-framelayout-absolutelayout-example-tutorial" target="_blank">Android FrameLayout AbsoluteLayout</a></li>
+<li><a href="https://www.journaldev.com/9531/android-scrollview-tablelayout" target="_blank">Android ScrollView TableLayout</a></li>
+<li><a href="https://www.journaldev.com/9958/android-navigation-drawer-example-tutorial" target="_blank">Android Navigation Drawer</a></li>
+<li><a href="https://www.journaldev.com/13927/android-collapsingtoolbarlayout-example" target="_blank">Android CollapsingToolbarLayout</a></li>
+<h4>Android Widgets</h4>
+<li><a href="https://www.journaldev.com/9474/android-imageview-example-tutorial" target="_blank">Android ImageView</a></li>
+<li><a href="https://www.journaldev.com/9555/android-textswitcher-and-imageswitcher-example-tutorial" target="_blank">Android TextSwitcher ImageSwitcher</a></li>
+<li><a href="https://www.journaldev.com/9574/android-autocompletetextview-example-tutorial" target="_blank">Android AutoCompleteTextView</a></li>
+<li><a href="https://www.journaldev.com/9629/android-progressbar-example" target="_blank">Android ProgressBar</a></li>
+<li><a href="https://www.journaldev.com/9635/android-seekbar-and-ratingbar-example-tutorial" target="_blank">Android SeekBar RatingBar</a></li>
+<li><a href="https://www.journaldev.com/10402/android-toggle-button-switch-example" target="_blank">Android Toggle Button, Switch</a></li>
+<li><a href="https://www.journaldev.com/9896/android-countdowntimer-example" target="_blank">Android Countdown Timer</a></li>
+<li><a href="https://www.journaldev.com/9942/android-expandablelistview-example-tutorial" target="_blank">Android ExpandableListView</a></li>
+<li><a href="https://www.journaldev.com/9976/android-date-time-picker-dialog" target="_blank">Android Date Time Picker</a></li>
+<li><a href="https://www.journaldev.com/10251/android-radio-button" target="_blank">Android Radio Button</a></li>
+<li><a href="https://www.journaldev.com/14673/android-floating-widget" target="_blank">Android Floating Widget</a></li>
+<li><a href="https://www.journaldev.com/14171/android-checkbox" target="_blank">Android Checkbox</a></li>
+<h4>Android Material Design</h4>
+<li><a href="https://www.journaldev.com/10024/android-recyclerview-android-cardview-example-tutorial" target="_blank">Android CardView RecyclerView</a></li>
+<li><a href="https://www.journaldev.com/15035/recyclerview-android-dividers-contextual-toolbar" target="_blank">Android RecyclerView with Dividers</a></li>
+<li><a href="https://www.journaldev.com/10096/android-viewpager-example-tutorial" target="_blank">Android ViewPager</a></li>
+<li><a href="https://www.journaldev.com/10200/android-drag-drop-draglinearlayout" target="_blank">Android Drag Drop</a></li>
+<li><a href="https://www.journaldev.com/10318/android-floating-action-button-example-tutorial" target="_blank">Android Floating Action Button</a></li>
+<li><a href="https://www.journaldev.com/10324/android-snackbar-example-tutorial" target="_blank">Android SnackBar</a></li>
+<li><a href="https://www.journaldev.com/10708/android-swiperefreshlayout-pull-swipe-refresh" target="_blank">Android Swipe Refresh</a></li>
+<li><a href="https://www.journaldev.com/10473/android-shared-element-transition-animation" target="_blank">Android Shared Element Transition Animation</a></li>
+<li><a href="https://www.journaldev.com/13590/android-constraintlayout" target="_blank">Android ConstraintLayout</a></li>
+<li><a href="https://www.journaldev.com/14777/constraint-layout-android-example" target="_blank">Android ConstraintLayout Example</a></li>
+<li><a href="https://www.journaldev.com/14748/android-textinputlayout-example" target="_blank">Android TextInputLayout</a></li>
+<li><a href="https://www.journaldev.com/13937/android-percent-layout-support-vertical-textview" target="_blank">Android Percent Layout</a></li>
+<h4>Android Maps</h4>
+<li><a href="https://www.journaldev.com/10365/android-google-maps-api" target="_blank">Android Google Maps</a></li>
+<li><a href="https://www.journaldev.com/10380/android-google-maps-example-tutorial" target="_blank">Android Google Maps Example Tutorial</a></li>
+<li><a href="https://www.journaldev.com/10392/google-static-maps-android" target="_blank">Google Static Maps</a></li>
+<li><a href="https://www.journaldev.com/13358/android-google-maps-current-location-night-mode" target="_blank">Android Google Maps Current Location</a></li>
+<li><a href="https://www.journaldev.com/13373/android-google-map-drawing-route-two-points" target="_blank">Android Google Map Route Drawing</a></li>
+<li><a href="https://www.journaldev.com/13911/google-places-api" target="_blank">Google Places API</a></li>
+</ul>
+</div>
+		</div></section>
+<section id="text-11" class="widget widget_text"><div class="widget-wrap"><h4 class="widget-title widgettitle">Recommended Tutorials</h4>
+			<div class="textwidget"><h4>Java Tutorials</h4>
+<ul>
+<li><a href="https://www.journaldev.com/942/java-io-tutorial" target="_blank">Java IO</a></li>
+<li><a href="https://www.journaldev.com/634/regular-expression-in-java-regex-example" target="_blank">Java Regular Expressions</a></li>
+<li><a href="https://www.journaldev.com/1079/multithreading-in-java" target="_blank">Multithreading in Java</a></li>
+<li><a href="https://www.journaldev.com/977/java-logging-api-tutorial-examples-logger-levels-handlers-formatters-filters" target="_blank">Java Logging</a></li>
+<li><a href="https://www.journaldev.com/721/java-annotations-example-tutorial" target="_blank">Java Annotations</a></li>
+<li><a href="https://www.journaldev.com/1240/java-xml-tutorial" target="_blank">Java XML</a></li>
+<li><a href="https://www.journaldev.com/1260/collections-in-java-tutorial" target="_blank">Collections in Java</a></li>
+<li><a href="https://www.journaldev.com/1663/java-generics-example-method-class-interface" target="_blank">Java Generics</a></li>
+<li><a href="https://www.journaldev.com/1696/exception-handling-in-java" target="_blank">Exception Handling in Java</a></li>
+<li><a href="https://www.journaldev.com/1789/java-reflection-example-tutorial" target="_blank">Java Reflection</a></li>
+<li><a href="https://www.journaldev.com/1827/java-design-patterns-example-tutorial" target="_blank">Java Design Patterns</a></li>
+<li><a href="https://www.journaldev.com/2681/jdbc-tutorial-with-example-projects-datasource-jndi-and-spring-integration" target="_blank">JDBC Tutorial</a></li>
+<h4>Java EE Tutorials</h4>
+<li><a href="https://www.journaldev.com/2114/servlet-jsp-tutorial" target="_blank">Servlet JSP Tutorial</a></li>
+<li><a href="https://www.journaldev.com/2310/struts2-tutorial-with-example-projects" target="_blank">Struts2 Tutorial</a></li>
+<li><a href="https://www.journaldev.com/2888/spring-tutorial-spring-core-tutorial" target="_blank">Spring Tutorial</a></li>
+<li><a href="https://www.journaldev.com/3793/hibernate-tutorial" target="_blank">Hibernate Tutorial</a></li>
+<li><a href="https://www.journaldev.com/5516/primefaces-tutorial-with-example-projects" target="_blank">Primefaces Tutorial</a></li>
+<li><a href="https://www.journaldev.com/255/axis2-web-services-tutorial" target="_blank">Apache Axis 2</a></li>
+<li><a href="https://www.journaldev.com/498/jax-rs-restful-web-service-using-jersey-example-tutorial" target="_blank">JAX-RS</a></li>
+<li><a href="https://www.journaldev.com/1117/memcached-tutorial" target="_blank">Memcached Tutorial</a></li>
+</ul>
+</div>
+		</div></section>
+<section id="text-10" class="widget widget_text" style=""><div class="widget-wrap">			<div class="textwidget"><p><script id="mNCC" language="javascript">
+    medianet_width = "300";
+    medianet_height = "600";
+    medianet_crid = "382243897";
+    medianet_versionId = "3111299"; 
+  </script><br>
+<script src="./Android Date Time Picker Dialog - JournalDev_files/nmedianet.js.download"></script></p>
+</div>
+		</div></section>
+</aside></div></div><footer class="site-footer" itemscope="" itemtype="https://schema.org/WPFooter"><div class="wrap"><p>©&nbsp;2018 · <a href="https://www.journaldev.com/privacy-policy">Privacy Policy</a> · Don't copy, it's Bad Karma · Powered by <a href="https://wordpress.org/" title="WordPress">WordPress</a></p></div></footer></div><script type="text/javascript">
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script src="./Android Date Time Picker Dialog - JournalDev_files/monetization.js.download" type="text/javascript"></script>
+<script>
+(function(){
+	if(typeof _bsa !== 'undefined' && _bsa) {
+  		// format, zoneKey, segment:value, options
+  		_bsa.init('stickybox', 'CKYI6KQU', 'placement:journaldevcom');
+               //  _bsa.init('fancybar', 'CK7D4KJE', 'placement:journaldevcom');
+  	}
+})();
+
+</script>
+<script type="text/javascript">
+    function _dmBootstrap(file) {
+        var _dma = document.createElement('script');
+        _dma.type = 'text/javascript';
+        _dma.async = true;
+        _dma.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + file;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(_dma);
+    }
+    function _dmFollowup(file) { if (typeof DMAds === 'undefined') _dmBootstrap('cdn2.DeveloperMedia.com/a.min.js'); }
+    (function () { _dmBootstrap('cdn1.DeveloperMedia.com/a.min.js'); setTimeout(_dmFollowup, 2000); })();
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./Android Date Time Picker Dialog - JournalDev_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-12171637-4', { 'anonymize_ip': true });
+</script>
+	<script src="./Android Date Time Picker Dialog - JournalDev_files/highlight.min.js.download"></script>
+	<script>
+		jQuery(document).ready(function() {
+		  jQuery('pre code').each(function(i, block) {
+			hljs.highlightBlock(block);
+			$(".entry-content pre").show();
+		  });
+		  	
+			jQuery('.entry-content pre code').mouseenter(function(e){
+				var t = jQuery(this);
+					t.children(".re_clip-board").slideDown(100);
+				jQuery(e.target).mouseleave(function(){
+					t.children(".re_clip-board").slideUp(100);
+					
+					setTimeout(function() {
+						t.children(".re_clip-board").text("Copy");
+					}, 100);
+					
+				});
+			});
+			
+			jQuery('.entry-content pre code .re_clip-board').click(function(e){
+				re_copyToClipboard(jQuery(this));
+				$(this).text("Copied!");
+				$(this).css("width", "85px");
+			});
+		});
+		
+function re_copyToClipboard(element) {
+	var elements = element.parent();
+  	var $temp = $("<textarea>");
+  	$("body").append($temp);
+	var text = $(elements).text().replace(/Copy/g, "");
+  	$temp.val(text).select();
+  	document.execCommand("copy");
+  	$temp.remove();
+}
+
+
+</script>
+	<link rel="stylesheet" id="dwpb_style-css" href="./Android Date Time Picker Dialog - JournalDev_files/main.css" type="text/css" media="all">
+<script type="text/javascript" src="./Android Date Time Picker Dialog - JournalDev_files/anti-spam-5.2.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var tocplus = {"smooth_scroll":"1","visibility_show":"show","visibility_hide":"hide","width":"Auto","smooth_scroll_offset":"60"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Android Date Time Picker Dialog - JournalDev_files/front.min.js.download"></script>
+<script type="text/javascript" src="./Android Date Time Picker Dialog - JournalDev_files/comment-reply.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var q2w3_sidebar_options = [{"sidebar":"sidebar","margin_top":10,"margin_bottom":0,"stop_id":"","screen_max_width":1024,"screen_max_height":120,"width_inherit":false,"refresh_interval":1500,"window_load_hook":false,"disable_mo_api":false,"widgets":["text-10"]}];
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Android Date Time Picker Dialog - JournalDev_files/q2w3-fixed-widget.min.js.download"></script>
+<script type="text/javascript" src="./Android Date Time Picker Dialog - JournalDev_files/wp-embed.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var dwpb = {"timeleft":"-206578","reset_cookie":"8"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Android Date Time Picker Dialog - JournalDev_files/jquery.countdown.js.download"></script>
+<script type="text/javascript" src="./Android Date Time Picker Dialog - JournalDev_files/jquery.cookie.js.download"></script>
+<script type="text/javascript" src="./Android Date Time Picker Dialog - JournalDev_files/main.js.download"></script>
+		<style>
+						@font-face {
+        font-family: "0";
+        src: url('');
+      }
+			#dwpb {
+				font-family: 0;
+			}
+			
+						#dwpb,
+			.dwpb-action {
+				background-color: #f7682c;
+			}
+			
+			
+						#dwpb,
+			.dwpb-action,
+			body.dwpb-allow-close.dwpb-open .dwpb-close {
+				color: #fff;
+			}
+			
+						#dwpb {
+				font-size: 16px;
+			}
+			
+			
+			
+						#dwpb {
+				border-width: 0;
+			}
+			
+						#dwpb a {
+				color: #ffffff;
+			}
+			
+						#dwpb .dwpb-button {
+				background-color: #096abf;
+			}
+			
+					</style>
+		
+		<div id="dwpb" class=" fixtop ">
+			<div class="dwpb-inner">
+				
+				<div class="dwpb-message">
+					<span class="dwpb-content">[Flash Sale] Java Interview Questions Course at Lowest Price</span>
+					 <a class="dwpb-button" href="https://www.journaldev.com/45f6" target="_blank" "="">Check Out Now</a>				</div>
+					
+				<div class="dwpb-countdown  hide">
+					<div class="dwpb-counter countdownHolder"><div class="countDays"><span class="position"><span class="digit static" style="top: 0px; opacity: 1;">0</span></span><span class="position"><span class="digit static" style="top: 0px; opacity: 1;">0</span></span><span class="boxName"><span class="Days">d</span></span></div><div class="countHours"><span class="position"><span class="digit static" style="top: 0px; opacity: 1;">0</span></span><span class="position"><span class="digit static" style="top: 0px; opacity: 1;">0</span></span><span class="boxName"><span class="Hours">h</span></span></div><div class="countMinutes"><span class="position"><span class="digit static" style="top: 0px; opacity: 1;">0</span></span><span class="position"><span class="digit static" style="top: 0px; opacity: 1;">0</span></span><span class="boxName"><span class="Minutes">m</span></span></div><div class="countSeconds"><span class="position"><span class="digit static" style="top: 0px; opacity: 1;">0</span></span><span class="position"><span class="digit static" style="top: 0px; opacity: 1;">0</span></span><span class="boxName"><span class="Seconds">s</span></span></div></div>
+					<span class="dwpbcd-content">[Flash Sale] Udemy Courses at $9.99/INR 640 Only</span>
+					 <a class="dwpb-button" href="https://www.journaldev.com/udemy-best-deal" target="_blank" "="">Check Out Now!</a>				</div>
+			</div>
+		</div>
+				<span class="dwpb-action"></span>
+	<!--Cached with Swift Performance-->
+
+<style id="dwpb-custom-style">body.dwpb-push-page.dwpb-open, body.dwpb-push-page.admin-bar.dwpb-open #wpadminbar, .dwpb-twenty-fourteen.dwpb-open.dwpb-push-page .site-header{top:40px}</style><style id="dwpb-custom-style-twenty-fourteen">.admin-bar.dwpb-twenty-fourteen.dwpb-open.dwpb-push-page .site-header{top:40px}</style><iframe src="./Android Date Time Picker Dialog - JournalDev_files/webPushAnalytics.html" style="display: none;"></iframe><div id="onesignal-bell-container" class="onesignal-bell-container onesignal-reset onesignal-bell-container-bottom-left"><div id="onesignal-bell-launcher" class="onesignal-bell-launcher onesignal-bell-launcher-md onesignal-bell-launcher-bottom-left onesignal-bell-launcher-theme-default onesignal-bell-launcher-active"><div class="onesignal-bell-launcher-button"><svg class="onesignal-bell-svg" xmlns="http://www.w3.org/2000/svg" width="99.7" height="99.7" viewBox="0 0 99.7 99.7" style="filter: drop-shadow(0 2px 4px rgba(34,36,38,0.35));; -webkit-filter: drop-shadow(0 2px 4px rgba(34,36,38,0.35));;"><circle class="background" cx="49.9" cy="49.9" r="49.9" style=""></circle><path class="foreground" d="M50.1 66.2H27.7s-2-.2-2-2.1c0-1.9 1.7-2 1.7-2s6.7-3.2 6.7-5.5S33 52.7 33 43.3s6-16.6 13.2-16.6c0 0 1-2.4 3.9-2.4 2.8 0 3.8 2.4 3.8 2.4 7.2 0 13.2 7.2 13.2 16.6s-1 11-1 13.3c0 2.3 6.7 5.5 6.7 5.5s1.7.1 1.7 2c0 1.8-2.1 2.1-2.1 2.1H50.1zm-7.2 2.3h14.5s-1 6.3-7.2 6.3-7.3-6.3-7.3-6.3z" style=""></path><ellipse class="stroke" cx="49.9" cy="49.9" rx="37.4" ry="36.9" style=""></ellipse></svg></div><div class="onesignal-bell-launcher-badge" style="filter: drop-shadow(0 2px 4px rgba(34,36,38,0));; -webkit-filter: drop-shadow(0 2px 4px rgba(34,36,38,0));;"></div><div class="onesignal-bell-launcher-message"><div class="onesignal-bell-launcher-message-body"></div></div><div class="onesignal-bell-launcher-dialog" style="filter: drop-shadow(0px 2px 2px rgba(34,36,38,.15));; -webkit-filter: drop-shadow(0px 2px 2px rgba(34,36,38,.15));;"><div class="onesignal-bell-launcher-dialog-body"></div></div></div></div></body></html>

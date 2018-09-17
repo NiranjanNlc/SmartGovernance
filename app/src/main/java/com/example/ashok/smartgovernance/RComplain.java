@@ -25,7 +25,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RComplain extends AppCompatActivity {
-
+    private static final String URL_COMPLAIN = "http://niranjanlamichhane.com/SmartGovernance/complain/reply.php";
     private TextView rloc,rid;
     private TextView rcomp,contact;
     private TextView rtop;
@@ -40,13 +40,14 @@ public class RComplain extends AppCompatActivity {
         rcomp=findViewById(R.id.rgriv);
         adress =findViewById(R.id.reply);
         reply = (EditText) findViewById(R.id.rrep);
-        rtop = findViewById(R.id.rtop);
+      //  rtop = findViewById(R.id.rtop);
         rloc=findViewById(R.id.rloc);
         contact = findViewById(R.id.contact);
         rid= findViewById(R.id.rid);
            // setting req   uired
         Bundle extras = getIntent().getExtras();
-        rtop.setText("TOPIC:"+ extras.getString("topic"));
+        rid.setText(extras.getString("id"));
+        //  rtop.setText("TOPIC:"+ extras.getString("topic"));
         rloc.setText("Location:"+ extras.getString("location"));
         rcomp.setText("Complain :"+extras.getString("griv"));
         contact.setText(extras.getString("contact"));
@@ -59,11 +60,12 @@ public class RComplain extends AppCompatActivity {
     {
         final String rep = (String) reply.getText().toString().trim();
         final String id = (String) rid.getText().toString().trim();
+        final int k = Integer.parseInt(id);
          final String c = (String) contact.getText().toString().trim();
         // sending reply imnto dATABASES
 
         // Request a string response from the provided URL.
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.1.3/SmartGovernance/complain/reply.php",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_COMPLAIN,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -95,7 +97,8 @@ public class RComplain extends AppCompatActivity {
     public void sendSms (String s ,String id ,  String sms )
     {
          String body = "YOUR complain ID: " + id + ":\n" + sms ;
-
+        Toast.makeText(getApplicationContext(),  body,
+                Toast.LENGTH_LONG).show();
         try {
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage(s, null, body , null, null);

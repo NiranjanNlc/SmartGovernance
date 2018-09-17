@@ -33,19 +33,18 @@
         <activity android:name=".Service" />
         <activity android:name=".complains" />
         <activity android:name=".adressComplain" />
-        <activity android:name=".Registration" />
+        <activity
+            android:name=".Registration"
+            android:parentActivityName=".Registration" />
         <activity android:name=".ApproveRegistrartion" />
         <activity android:name=".ViewFeedback" />
         <activity android:name=".Government" />
         <activity android:name=".RComplain" />
-        <activity android:name=".splashscreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Discussion"></activity>
+        <activity android:name=".Discussion" />
+        <activity android:name=".UploadNotice" />
+        <activity android:name=".Forget" />
+        <activity android:name=".Login" />
+        <activity android:name=".welcome"></activity>
     </application>
 
 </manifest>

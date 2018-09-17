@@ -9,6 +9,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ComplainAdapter extends RecyclerView.Adapter<ComplainAdapter.ComplainViewHolder>{
-   private List<ComplainModel> listitem;
+    private List<ComplainModel> listitem;
     private Context ctx;
 
     public ComplainAdapter(List<ComplainModel> listitem, Context ctx) {
@@ -38,7 +39,7 @@ public class ComplainAdapter extends RecyclerView.Adapter<ComplainAdapter.Compla
     @Override
     public ComplainViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.complainlist, null);
+        View view = inflater.inflate(R.layout.complainlist, parent, false);
         return new ComplainViewHolder(view, ctx,listitem);
     }
 
@@ -48,12 +49,14 @@ public class ComplainAdapter extends RecyclerView.Adapter<ComplainAdapter.Compla
                  ComplainModel complain = listitem.get(position);
         Glide.with(ctx)
                 .load(complain.getCimg())
+                .apply(new com.bumptech.glide.request.RequestOptions().centerCrop())
                 .into(holder.cimg);
-        holder.cid.setText(complain.getCid());
+        Log.i("Complain", complain.getCimg());
+//        holder.cid.setText(complain.getCid());
         holder.ctop.setText(complain.getCtop() );
-        holder.cloc.setText(complain.getCloc() );
+//        holder.cloc.setText(complain.getCloc() );
         holder.name.setText(complain.getCname());
-        holder.contact.setText(complain.getContact());
+//        holder.contact.setText(complain.getContact());
         holder.cgriv.setText(complain.getCgriv() );
       //   holder.textViewTitle.setText(product.getTitle());
     }
@@ -76,13 +79,13 @@ public class ComplainAdapter extends RecyclerView.Adapter<ComplainAdapter.Compla
             itemView.setOnClickListener(this);
 
             ctop = itemView.findViewById(R.id.ctopic);
-            cloc = itemView.findViewById(R.id.clocation);
+//            cloc = itemView.findViewById(R.id.clocation);
             cgriv = itemView.findViewById(R.id.cgriev);
             cimg = itemView.findViewById(R.id.cimg);
-           name = itemView.findViewById(R.id.name);
-            contact = itemView.findViewById(R.id.contact);
+            name = itemView.findViewById(R.id.name);
+//            contact = itemView.findViewById(R.id.contact);
 
-            cid = itemView.findViewById(R.id.cid);
+//            cid = itemView.findViewById(R.id.cid);
 
         }
 
@@ -98,10 +101,10 @@ public class ComplainAdapter extends RecyclerView.Adapter<ComplainAdapter.Compla
   ComplainModel c = this.listitem.get(position);
             Intent i = new Intent(this.ctx,RComplain.class);
 
-        //    i.putExtra("img",bitmap);
+            //    i.putExtra("img",bitmap);
 
             i.putExtra("topic",c.getCtop());
-       i.putExtra("id",c.getCid());
+            i.putExtra("id",c.getCid());
             i.putExtra("location",c.getCloc());
             i.putExtra("name",c.getCname());
             i.putExtra("contact",c.getContact());

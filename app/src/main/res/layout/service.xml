@@ -10,162 +10,173 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-
-        android:layout_weight="1">
+        android:onClick="s3"
+        android:padding="5dp">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/cimg"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/register" />
+            android:layout_height="120dp"
+            android:layout_weight="2"
+
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/police" />
+
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="2"
+
             android:orientation="vertical">
-            <TextView
-                android:id="@+id/t1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Child Abiuse" />
+
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:text="16600122311" />
+                tools:text="Nepal police"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nepaql Police :100"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+
         </LinearLayout>
     </LinearLayout>
-    // २नद रोौस
+    // 2nd row
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-
-        android:layout_weight="1">
+        android:onClick="s3">
 
         <ImageView
-            android:id="@+id/i2"
+
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/register" />
+            android:layout_height="120dp"
+            android:layout_weight="2"
+
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/trafic" />
+
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="2"
+
             android:orientation="vertical">
+
+
             <TextView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Child Abiuse" />
+                android:textSize="16sp"
+                tools:text="Traficc"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Traffic :103"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
 
-                android:text="16600122311" />
+
         </LinearLayout>
     </LinearLayout>
-    // 3rd rows
+// 3rd row
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-
-        android:layout_weight="1">
+        android:onClick="s3">
 
         <ImageView
-            android:id="@+id/i3"
+
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/register" />
+            android:layout_height="120dp"
+            android:layout_weight="2"
+
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/abuse" />
+
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="2"
+
             android:orientation="vertical">
-            <TextView
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Child Abiuse" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="16sp"
+                tools:text="Child Abuse"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
 
-                android:text="16600122311" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Child Abuse :1660012211"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+
         </LinearLayout>
     </LinearLayout>
-    // 3rd row
-
-    /// 5th row
+    3rd row
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-
-        android:layout_weight="1">
-
-        <ImageView
-            android:id="@+id/i4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/register" />
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:orientation="vertical">
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Child Abiuse" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="16600122311" />
-        </LinearLayout>
-    </LinearLayout>
-    // 6th rows view
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-
-        android:layout_weight="1">
+        android:onClick="s3">
 
         <ImageView
-            android:id="@+id/i5"
+
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/register" />
+            android:layout_height="120dp"
+            android:layout_weight="2"
+
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/pok" />
+
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="2"
+
             android:orientation="vertical">
-            <TextView
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Child Abiuse" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="16sp"
+                tools:text="Municipality"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
 
-                android:text="16600122311" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Municipality :1660012211"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+
         </LinearLayout>
     </LinearLayout>
-
 </LinearLayout>

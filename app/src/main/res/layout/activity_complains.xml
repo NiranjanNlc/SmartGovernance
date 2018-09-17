@@ -25,37 +25,70 @@
             android:id="@+id/tx"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1.Personal Detail "
+            android:text="1.Minor  Detail "
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
-        <TextView
-            android:id="@+id/name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Enter Your name : "
-            />
-        <EditText
-            android:id="@+id/ename"
-            android:layout_width="fill_parent"
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        </EditText>
+            <android.support.design.widget.TextInputEditText
+                android:hint="Enter YTour name"
+                android:id="@+id/ename"
+                android:imeOptions="actionNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
 
-        <TextView
-            android:id="@+id/con"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Enter contact/email "
-
-            />
-
-        <EditText
-            android:id="@+id/emails"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            >
-        </EditText>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputEditText
+                android:hint="Enter your contact "
+                android:id="@+id/emails"
+                android:imeOptions="actionNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
 
         <!---detail end vayo yeha bata -->
+
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp" />
+        <!---  <EditText
+          android:id="@+id/top"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:gravity="top" />-->
+
+         <!-- <EditText
+              android:id="@+id/loc"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:gravity="top" /> -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="DATE :"
+                android:id="@+id/btn_date"
+                android:layout_weight="2"
+                android:onClick="get"
+                />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/in_date"
+                android:layout_alignParentTop="true"
+                android:layout_weight="4"
+             />
+        </LinearLayout>
 
         <TextView
 
@@ -63,59 +96,37 @@
             android:layout_height="wrap_content"
             android:text="2.Please give your grivenance"
             android:textAppearance="?android:attr/textAppearanceLarge" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="topics"
-            />
-         <EditText
-        android:id="@+id/top"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="top" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Location"
-            />
-        <EditText
-            android:id="@+id/loc"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="top" />
-        <TextView
-            android:id="@+id/textViewSMS"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Enter the Message : "
-            />
-        <EditText
-            android:id="@+id/comp"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
-            android:lines="3"
-            android:gravity="top" />
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:id="@+id/img"
-            android:visibility="gone"/>
-        <Button
-            android:id="@+id/upload"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Upload images "
-            android:textColor="#000"
-            android:background="#fff"
-            />
-        <Button
-            android:id="@+id/buttonSend"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Send"
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputEditText
+                android:hint="Enter the message "
+                android:id="@+id/comp"
+                android:imeOptions="actionNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="4"/>
+        </android.support.design.widget.TextInputLayout>
+          <ImageView
+              android:layout_width="200dp"
+              android:layout_height="200dp"
+              android:id="@+id/img"
+              android:visibility="gone"/>
+          <Button
+              android:id="@+id/upload"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="Upload images "
+              android:textColor="#000"
+              android:background="#fff"
+              />
+          <Button
+              android:id="@+id/buttonSend"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="Send"
 
-            />
+              />
 
-    </LinearLayout>
-</ScrollView>
+      </LinearLayout>
+  </ScrollView>

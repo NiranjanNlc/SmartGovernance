@@ -26,7 +26,7 @@
             android:layout_marginBottom="8dp">
 
             <EditText
-                android:id="@+id/input_email"
+                android:id="@+id/uid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint=" National identification no."
@@ -41,10 +41,10 @@
             android:layout_marginBottom="8dp">
 
             <EditText
-                android:id="@+id/input_password"
+                android:id="@+id/pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Date of birth (2053/03/10)"
+                android:hint="Your password ....."
                 android:inputType="textPassword" />
         </android.support.design.widget.TextInputLayout>
 

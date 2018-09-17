@@ -59,7 +59,7 @@
             android:cropToPadding="true"
             android:onClick="b4"
             android:scaleType="centerCrop"
-            android:src="@drawable/RTI1" />
+            android:src="@drawable/rti1" />
 
 
     </LinearLayout>

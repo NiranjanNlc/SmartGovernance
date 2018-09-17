@@ -31,7 +31,7 @@ import java.util.List;
 public class Discussion extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
-    public static final String ANONYMOUS = "anonymous";
+    public static final String ANONYMOUS = "citizen";
     public static final int DEFAULT_MSG_LENGTH_LIMIT = 1000;
 
     private ListView mMessageListView;
@@ -58,7 +58,7 @@ public class Discussion extends AppCompatActivity {
         // Initialize references to views
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
         mMessageListView = (ListView) findViewById(R.id.messageListView);
-        mPhotoPickerButton = (ImageButton) findViewById(R.id.photoPickerButton);
+       // mPhotoPickerButton = (ImageButton) findViewById(R.id.photoPickerButton);
         mMessageEditText = (EditText) findViewById(R.id.messageEditText);
         mSendButton = (Button) findViewById(R.id.sendButton);
 
@@ -71,12 +71,12 @@ public class Discussion extends AppCompatActivity {
         mProgressBar.setVisibility(ProgressBar.INVISIBLE);
 
         // ImagePickerButton shows an image picker to upload a image for a message
-        mPhotoPickerButton.setOnClickListener(new View.OnClickListener() {
+      /*  mPhotoPickerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // TODO: Fire an intent to show an image picker
             }
-        });
+        }); */
 
         // Enable Send button when there's text to send
         mMessageEditText.addTextChangedListener(new TextWatcher() {
@@ -106,7 +106,7 @@ public class Discussion extends AppCompatActivity {
                 // TODO: Send messages on click
                ModelDiscussion modelDiscussion = new ModelDiscussion(mMessageEditText.getText().toString(), mUsername, null);
 
-
+                 mMessageDatabaseReference.push().setValue(modelDiscussion);
                 // Clear input box
                 mMessageEditText.setText("");
             }

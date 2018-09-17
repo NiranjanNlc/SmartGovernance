@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<!-- saved from url=(0090)http://www.coderslexicon.com/the-basics-of-passing-values-from-javascript-to-php-and-back/ -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="stndz-style"></style>
+
+
+<title>  The Basics of Passing Values From JavaScript to PHP and Back : The Coders Lexicon</title>
+<meta name="description" content="We discuss the process of sharing variables between JavaScript and a server-side language like PHP to create a cohesive web application.">
+<meta name="keywords" content="PHP, JavaScript, Passing Variables, Web Development, Web Applications">
+    
+<link rel="icon" type="image/png" href="http://www.coderslexicon.com/wp-content/themes/wptuts/favicon.ico">
+<link rel="shortcut icon" href="http://www.coderslexicon.com/wp-content/themes/wptuts/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="stylesheet" type="text/css" href="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/style.css">
+
+
+<script src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/cb=gapi.loaded_1" async=""></script><script src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/cb=gapi(1).loaded_0" async=""></script><script type="text/javascript" async="" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/ga.js.download"></script><script type="text/javascript" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/plusone.js.download" async="" gapi_processed="true"></script>
+
+<!-- Head -->
+<link rel="dns-prefetch" href="http://ajax.googleapis.com/">
+<link rel="dns-prefetch" href="http://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="The Coders Lexicon » The Basics of Passing Values From JavaScript to PHP and Back Comments Feed" href="http://www.coderslexicon.com/the-basics-of-passing-values-from-javascript-to-php-and-back/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.coderslexicon.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.7"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="edd-styles-css" href="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/edd.min.css" type="text/css" media="all">
+<script type="text/javascript" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/jquery.min.js.download"></script>
+<script type="text/javascript" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/mailchimp-widget-min.js.download"></script>
+<link rel="https://api.w.org/" href="http://www.coderslexicon.com/wp-json/">
+<link rel="prev" title="Demo of Twitter Application-Only OAuth Authentication Using Java" href="http://www.coderslexicon.com/demo-of-twitter-application-only-oauth-authentication-using-java/">
+<link rel="next" title="Questions Programmers Should Ask Their Interviewers" href="http://www.coderslexicon.com/questions-programmers-should-ask-their-interviewers/">
+<link rel="shortlink" href="http://www.coderslexicon.com/?p=1871">
+<link rel="alternate" type="application/json+oembed" href="http://www.coderslexicon.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.coderslexicon.com%2Fthe-basics-of-passing-values-from-javascript-to-php-and-back%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://www.coderslexicon.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.coderslexicon.com%2Fthe-basics-of-passing-values-from-javascript-to-php-and-back%2F&amp;format=xml">
+<style data-context="foundation-flickity-css">/*! Flickity v2.0.2
+http://flickity.metafizzy.co
+---------------------------------------------- */.flickity-enabled{position:relative}.flickity-enabled:focus{outline:0}.flickity-viewport{overflow:hidden;position:relative;height:100%}.flickity-slider{position:absolute;width:100%;height:100%}.flickity-enabled.is-draggable{-webkit-tap-highlight-color:transparent;tap-highlight-color:transparent;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.flickity-enabled.is-draggable .flickity-viewport{cursor:move;cursor:-webkit-grab;cursor:grab}.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down{cursor:-webkit-grabbing;cursor:grabbing}.flickity-prev-next-button{position:absolute;top:50%;width:44px;height:44px;border:none;border-radius:50%;background:#fff;background:hsla(0,0%,100%,.75);cursor:pointer;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.flickity-prev-next-button:hover{background:#fff}.flickity-prev-next-button:focus{outline:0;box-shadow:0 0 0 5px #09F}.flickity-prev-next-button:active{opacity:.6}.flickity-prev-next-button.previous{left:10px}.flickity-prev-next-button.next{right:10px}.flickity-rtl .flickity-prev-next-button.previous{left:auto;right:10px}.flickity-rtl .flickity-prev-next-button.next{right:auto;left:10px}.flickity-prev-next-button:disabled{opacity:.3;cursor:auto}.flickity-prev-next-button svg{position:absolute;left:20%;top:20%;width:60%;height:60%}.flickity-prev-next-button .arrow{fill:#333}.flickity-page-dots{position:absolute;width:100%;bottom:-25px;padding:0;margin:0;list-style:none;text-align:center;line-height:1}.flickity-rtl .flickity-page-dots{direction:rtl}.flickity-page-dots .dot{display:inline-block;width:10px;height:10px;margin:0 8px;background:#333;border-radius:50%;opacity:.25;cursor:pointer}.flickity-page-dots .dot.is-selected{opacity:1}</style><style data-context="foundation-slideout-css">.slideout-menu{position:fixed;left:0;top:0;bottom:0;right:auto;z-index:0;width:256px;overflow-y:auto;-webkit-overflow-scrolling:touch;display:none}.slideout-menu.pushit-right{left:auto;right:0}.slideout-panel{position:relative;z-index:1;will-change:transform}.slideout-open,.slideout-open .slideout-panel,.slideout-open body{overflow:hidden}.slideout-open .slideout-menu{display:block}.pushit{display:none}</style><link rel="canonical" href="http://www.coderslexicon.com/the-basics-of-passing-values-from-javascript-to-php-and-back/">
+<link rel="stylesheet" type="text/css" href="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/shCore.css"><link rel="stylesheet" type="text/css" href="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/shThemeDefault.css"><style type="text/css" id="syntaxhighlighteranchor"></style>
+<style>.ios7.web-app-mode.has-fixed header{ background-color: rgba(114,154,12,.88);}</style>
+<script type="text/javascript" charset="utf-8">
+jQuery(function($){
+	$(document).ready(function(){
+		//Image opacity hover-over
+		var opacity = 1, toOpacity = 0.7, duration = 300;
+		$('.opacity').css('opacity',opacity).hover(
+		function() {
+		$(this).fadeTo(duration,toOpacity);},
+		function() {
+		$(this).fadeTo(duration,opacity);
+		} );
+	// superFish
+	$('ul.sf-menu').supersubs({
+		minWidth:    16, // minimum width of sub-menus in em units
+		maxWidth:    40, // maximum width of sub-menus in em units
+		extraWidth:  1 // extra width can ensure lines don't sometimes turn over
+     })
+    	.superfish(); // call supersubs first, then superfish
+	});
+});
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30739055-1']);
+  _gaq.push(['_setDomainName', 'coderslexicon.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script async="" type="text/javascript" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/count.js.download"></script><script type="text/javascript" async="" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/embed.js.download"></script><script type="text/javascript" charset="utf-8" async="" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/button.bf357a6ba1a5f1fa0ddb61377ae3add5.js.download"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:-webkit-sticky;top:0}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_customer_chat_bounce_in_v1{animation-duration:250ms;animation-name:fb_bounce_in_v1}.fb_customer_chat_bounce_out_v1{animation-duration:250ms;animation-name:fb_bounce_out_v1}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2_mobile_chat_started{animation-duration:300ms;animation-name:fb_bounce_in_v2_mobile_chat_started;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2_mobile_chat_started{animation-duration:300ms;animation-name:fb_bounce_out_v2_mobile_chat_started;transition-timing-function:ease-in}.fb_customer_chat_bubble_pop_in{animation-duration:250ms;animation-name:fb_customer_chat_bubble_bounce_in_animation}.fb_customer_chat_bubble_animated_no_badge{box-shadow:0 3px 12px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_no_badge:hover{box-shadow:0 5px 24px rgba(0, 0, 0, .3)}.fb_customer_chat_bubble_animated_with_badge{box-shadow:-5px 4px 14px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_with_badge:hover{box-shadow:-5px 8px 24px rgba(0, 0, 0, .2)}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_mobile_overlay_active{background-color:#fff;height:100%;overflow:hidden;position:fixed;visibility:hidden;width:100%}@keyframes fb_bounce_in_v1{0%{opacity:0;transform:scale(.8, .8);transform-origin:bottom right}80%{opacity:.8;transform:scale(1.03, 1.03)}100%{opacity:1;transform:scale(1, 1)}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_v2_mobile_chat_started{0%{opacity:0;top:20px}100%{opacity:1;top:0}}@keyframes fb_bounce_out_v1{from{opacity:1}to{opacity:0}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_v2_mobile_chat_started{0%{opacity:1;top:0}100%{opacity:0;top:20px}}@keyframes fb_customer_chat_bubble_bounce_in_animation{0%{bottom:6pt;opacity:0;transform:scale(0, 0);transform-origin:center}70%{bottom:18pt;opacity:1;transform:scale(1.2, 1.2)}100%{transform:scale(1, 1)}}</style><link rel="preload" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.3999ac261b914f8b8b5e85df0ff3eaea.css"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.40e1175903c8bfb9e65177eace372a69.js"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.2540bb2ef6fac66d558411d802126c7e.js"><link rel="preload" as="script" href="https://disqus.com/next/config.js"></head>
+<body class="post-template-default single single-post postid-1871 single-format-standard">
+<div id="header-wrap">
+    <div id="header" class="clearfix">
+        <div id="logo">
+        	            <a href="http://www.coderslexicon.com/" title="The Coders Lexicon" rel="home"><img src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/lexicon-text-logo-trans.png" alt="The Coders Lexicon"></a>
+                    </div>
+        
+                	<div id="top-ad">
+        		        	</div>
+         
+        
+    </div>
+</div>
+
+<div id="navigation-wrap">
+    <div id="navigation" class="clearfix">
+                <div class="menu-top-nav-container"><ul id="menu-top-nav" class="sf-menu sf-js-enabled sf-shadow"><li id="menu-item-20" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-20"><a href="http://www.coderslexicon.com/">Blog</a></li>
+<li id="menu-item-1214" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1214"><a href="http://www.coderslexicon.com/the-basics-of-passing-values-from-javascript-to-php-and-back/#" class="sf-with-ul">Code Library<span class="sf-sub-indicator"> »</span></a>
+<ul class="sub-menu" style="float: none; width: 16em; display: none; visibility: hidden;">
+	<li id="menu-item-492" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-492" style="white-space: normal; float: left; width: 100%;"><a href="http://www.coderslexicon.com/cpp/" style="float: none; width: auto;">C and C++</a></li>
+	<li id="menu-item-478" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-478" style="white-space: normal; float: left; width: 100%;"><a href="http://www.coderslexicon.com/java/" style="float: none; width: auto;">Java Programming</a></li>
+	<li id="menu-item-581" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-581" style="white-space: normal; float: left; width: 100%;"><a href="http://www.coderslexicon.com/javascript/" style="float: none; width: auto;">JavaScript and jQuery</a></li>
+	<li id="menu-item-493" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-493" style="white-space: normal; float: left; width: 100%;"><a href="http://www.coderslexicon.com/php/" style="float: none; width: auto;">PHP Web Development</a></li>
+	<li id="menu-item-495" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-495" style="white-space: normal; float: left; width: 100%;"><a href="http://www.coderslexicon.com/vb-net/" style="float: none; width: auto;">VB.NET</a></li>
+	<li id="menu-item-494" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494" style="white-space: normal; float: left; width: 100%;"><a href="http://www.coderslexicon.com/csharp/" style="float: none; width: auto;">Visual C#</a></li>
+</ul>
+</li>
+<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="http://www.coderslexicon.com/reference-links/">Reference Links</a></li>
+<li id="menu-item-541" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-541"><a href="http://www.coderslexicon.com/recommended-reading/">Recommended Reading</a></li>
+<li id="menu-item-5204" class="menu-item menu-item-type-taxonomy menu-item-object-download_category menu-item-has-children menu-item-5204"><a title="Purchase our ebooks today!" href="http://www.coderslexicon.com/downloads/category/ebooks/" class="sf-with-ul">Purchase Ebooks<span class="sf-sub-indicator"> »</span></a>
+<ul class="sub-menu" style="float: none; width: 16.2308em; display: none; visibility: hidden;">
+	<li id="menu-item-5205" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5205" style="white-space: normal; float: left; width: 100%;"><a title="200 programming project ideas in one book" href="http://www.coderslexicon.com/downloads/the-programmers-idea-book/" style="float: none; width: auto;">The Programmers Idea Book</a></li>
+	<li id="menu-item-5206" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5206" style="white-space: normal; float: left; width: 100%;"><a title="Find bugs, kill bugs and tell others about it" href="http://www.coderslexicon.com/downloads/diagnosing-the-problem/" style="float: none; width: auto;">Diagnosing the Problem</a></li>
+</ul>
+</li>
+<li id="menu-item-964" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-964"><a title="Want the latest info, code and discounts? Subscribe!" href="http://www.coderslexicon.com/subscription-list/">Subscribe</a></li>
+<li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="http://www.coderslexicon.com/about-the-lexicon/">About the Lexicon</a></li>
+</ul></div>    </div>   
+</div>
+
+<div id="top-border"></div>
+<div id="wrap" class="clearfix">    <div id="post-content">  
+        <div class="single-entry clearfix">
+                
+                <h1>The Basics of Passing Values From JavaScript to PHP and Back</h1>
+                <div class="post-meta-single">Posted on 05/08/13 | <a href="http://www.coderslexicon.com/category/web-development/" rel="category tag">Web Development</a></div>
+
+                                <p><img src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/js-php.jpg" alt="Passing Variables Between JavaScript and PHP" width="180" height="127" class="alignleft size-full wp-image-1875">One of the common questions I often run into from new programmers to JavaScript or PHP is how to pass values back and forth between the two. The quagmire is that JavaScript is a client side language (most of the time) and PHP is a <a href="http://en.wikipedia.org/wiki/Server-side_language" title="Server-side Scripting - Wikipedia" target="_blank">server-side language</a>. Once you know how the process works when someone submits some data on the front end, and how it is manipulated and returned on the back end, it is easy to see how you can exchange information between the languages.</p>
+<h4>PHP to JavaScript</h4>
+<p>When you visit a PHP page for the first time (or any website that has a server-side language generating its pages) your browser first requests a page from the server. The server in turn takes the request, calls PHP to build the page and manipulate variables, then returns the results back to the user in the form of HTML, a string, XML, JavaScript and more.</p>
+<p>With the first request you typically don’t have any immediate data you are sending back through JavaScript. So PHP returns some JavaScript that is pretty standard and generic like handling form validation or perhaps some basic functions. When PHP prints the results it can also stick in values that it has for variables. For instance it may print out the message “Hello World” which is contained in the variable $hello.</p>
+<div id="highlighter_230285" class="syntaxhighlighter  "><div class="bar"><div class="toolbar"><a href="http://www.coderslexicon.com/the-basics-of-passing-values-from-javascript-to-php-and-back/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_230285_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_230285" menu="false" src="http://www.coderslexicon.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://www.coderslexicon.com/the-basics-of-passing-values-from-javascript-to-php-and-back/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://www.coderslexicon.com/the-basics-of-passing-values-from-javascript-to-php-and-back/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines no-wrap"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="functions">echo</code> <code class="string">"Just wanted to say $hello"</code><code class="plain">;</code></td></tr></tbody></table></div></div></div>
+<p>Keep this part in the back of your mind for a second as we will return to the idea of this variable in a second.</p>
+<h4>JavaScript to PHP</h4>
+<p>On the JavaScript side the way you typically pass a value from JavaScript to PHP is through the request. Either the URL as a parameter (which PHP will see come in through the array $_GET) or through a post request (like when someone submits a login form and PHP will see it come in through the array $_POST). </p>
+<p>Now you may build this URL dynamically through JavaScript and send it to the server through either an AJAX call (like <a href="http://api.jquery.com/jQuery.ajax/" title="jQuery .ajax() Documentation" target="_blank">jQuery’s .ajax</a> method) or through something like a JavaScript <span class="inlinecode">window.location.href = URL;</span> type of mechanism. In that URL you would have the data you want to send to PHP. Below is an example of a JavaScript function which might be called on the pressing of a button…</p>
+<div id="highlighter_515415" class="syntaxhighlighter  "><div class="bar                         "><div class="toolbar"><a href="http://www.coderslexicon.com/the-basics-of-passing-values-from-javascript-to-php-and-back/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_515415_clipboard" type="application/x-shockwave-flash" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_515415" menu="false" src="http://www.coderslexicon.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://www.coderslexicon.com/the-basics-of-passing-values-from-javascript-to-php-and-back/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://www.coderslexicon.com/the-basics-of-passing-values-from-javascript-to-php-and-back/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines no-wrap"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">function sayHelloWorld() {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">var hello = "hello";</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">var world = "world";</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">window.location.href = "somepage.php?w1=" + hello + "&amp;w2=" + world;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div>
+<p>In this function above we have two JavaScript variables which are concatenating into a URL. We then tell the window to go to this PHP page with the two parameters “w1” and “w2” which holds the data. Here we are essentially passing two variables from JavaScript to PHP. The browser would then go to the URL http://www.somedomainname.com/somepage.php?w1=hello&amp;w2=world.</p>
+<h4>PHP Receiving and Processing The Variables</h4>
+<p>Now that JavaScript has issued the request, and passed some parameters, PHP can see the data coming in through its $_GET array and use it to build our PHP from earlier “$hello”. Now again since we did this through the passing of parameters in a URL, PHP is going to see them as $_GET. If we had stuck these values in some form and submitted the form using JavaScript, PHP would have seen them in the $_POST array. So be mindful of the method you are using to pass the data.</p>
+<p>With the PHP arrays we can read in the values, manipulate them as we see fit (like to build queries or fetch some sort of data) and then stick our results back into some new JavaScript which we will print to the user. Remember, PHP prints the JavaScript with the results. That is how it gives info back to JavaScript. PHP prints its results and is unaware that the request came from JavaScript. It sees the request as just any other browser request. </p>
+<p>Below is an example of a function that we would print back to the user. Notice that the PHP function is printing a JavaScript function which it is dynamically building…</p>
+<div id="highlighter_36294" class="syntaxhighlighter  "><div class="bar                                                                               "><div class="toolbar"><a href="http://www.coderslexicon.com/the-basics-of-passing-values-from-javascript-to-php-and-back/#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><div class="item copyToClipboard"><embed width="16" height="16" id="highlighter_36294_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_36294" menu="false" src="http://www.coderslexicon.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf"></div><a href="http://www.coderslexicon.com/the-basics-of-passing-values-from-javascript-to-php-and-back/#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://www.coderslexicon.com/the-basics-of-passing-values-from-javascript-to-php-and-back/#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines no-wrap"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="keyword">function</code> <code class="plain">sayHiBack() {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;</code><code class="comments">// Check if we have parameters w1 and w2 being passed to the script through the URL</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;</code><code class="keyword">if</code> <code class="plain">(isset(</code><code class="variable">$_GET</code><code class="plain">[</code><code class="string">"w1"</code><code class="plain">]) &amp;&amp; isset(</code><code class="variable">$_GET</code><code class="plain">[</code><code class="string">"w2"</code><code class="plain">])) {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">// Put the two words together with a space in the middle to form "hello world"</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="variable">$hello</code> <code class="plain">= </code><code class="variable">$_GET</code><code class="plain">[</code><code class="string">"w1"</code><code class="plain">] . </code><code class="string">" "</code> <code class="plain">. </code><code class="variable">$_GET</code><code class="plain">[</code><code class="string">"w2"</code><code class="plain">];</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>8</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="comments">// Print out some JavaScript with $hello stuck in there which will put "hello world" into the javascript.</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>9</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="functions">echo</code> <code class="string">"&lt;script language='text/javascript'&gt;function sayHiFromPHP() { alert('Just wanted to say $hello!'); }&lt;/script&gt;"</code><code class="plain">;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div>
+<p>This code would then print out the JavaScript function “sayHiFromPHP” which then other JavaScript could call as a normal function and it would print out the $hello you got from PHP. We could have also called this function on window load or some other event.</p>
+<h4>The Power of JavaScript AJAX in This Situation</h4>
+<p>We touched on this earlier but this process can also be done with an AJAX call from JavaScript. Here the JavaScript would put together a URL with the parameters it wants to pass to PHP. Just like we did in the examples above. PHP would see the parameters again through $_GET or $_POST depending on the method you use to submit the data. It would work with the data, generate some results which it returns to the browser as if it was printing a normal page. But this time it is being returned as a result to JavaScript. Meaning that once the page returns it is going to return the HTML source code right back to the AJAX call in JavaScript. From there JavaScript can then manipulate the data as it sees fit.</p>
+<p>This process is pretty much the same as I just described but with the AJAX call it is shortened because JavaScript is going to get the result of the PHP back directly. PHP is still unaware of JavaScript and is printing results like it would to the browser. This method is especially useful if you have your PHP printing something simple like a table or even a simple string of text.</p>
+<h4>Conclusion</h4>
+<p>In this article we explained the process by which JavaScript and PHP can communicate. When we first visit the page, the normal page content is printed. The user does something which triggers some data to be added to a URL or posted through a form dynamically using JavaScript. That JavaScript submits the data to PHP which sees the input coming in through the $_GET or $_POST arrays. It pulls that data out, manipulates it, constructs a response in the form of some JavaScript and sends it back to the user. The user can then execute that JavaScript.</p>
+<p>We then briefly touched on the process by which JavaScript shortens the process using AJAX to both send the data to PHP and waits for the info to be processed and then directly receives the data back into JavaScript for further manipulation. </p>
+<p>Once you get the process down, I recommend you play more with the AJAX method since it is often quicker and more dynamic. When you get the hang of it, AJAX will make the page seem more fluid and responsive since it doesn’t require the entire page to refresh.</p>
+<p>Thanks again for reading and good luck with your JavaScript/PHP projects! <img draggable="false" class="emoji" alt="🙂" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/1f642.svg"></p>
+<p><em><strong>Update:</strong> As pointed out by one of our commenters the code in this article is meant to show you the process by which the two languages can communicate. It is up to you to make sure that you properly validate all incoming data to PHP and also to encode and properly display the JavaScript returned by PHP. DO NOT simply cut and paste into a production environment. Thanks!</em></p>
+
+                <div class="clear"></div>
+                        	
+        
+                     
+            <div class="post-bottom">
+                <div class="post-tags"><a href="http://www.coderslexicon.com/tag/javascript/" rel="tag">JavaScript</a> <a href="http://www.coderslexicon.com/tag/php/" rel="tag">PHP</a> <a href="http://www.coderslexicon.com/tag/web-development-2/" rel="tag">Web Development</a></div>        
+            </div>
+        </div>
+        
+        
+        <div id="post-author" class="clearfix">
+            <div id="author-avatar">
+                <img alt="" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/3dd62537ef0d2997bbb96ddf487295ec.jpeg" srcset="http://0.gravatar.com/avatar/3dd62537ef0d2997bbb96ddf487295ec?s=120&amp;d=mm&amp;r=pg 2x" class="avatar avatar-60 photo" height="60" width="60">            </div>
+                
+            <div id="author-description">
+                <h4>About The Author</h4>
+                Martyr2 is the founder of the Coders Lexicon and author of the new ebooks "<a href="http://www.coderslexicon.com/downloads/the-programmers-idea-book/">The Programmers Idea Book</a>" and "<a href="http://www.coderslexicon.com/downloads/diagnosing-the-problem/">Diagnosing the Problem</a>" . He has been a programmer for over 18 years. He works for a hot application development company in Vancouver Canada which service some of the biggest telecoms in the world. He has won numerous awards for his mentoring in software development and contributes regularly to several communities around the web. He is an expert in numerous languages including .NET, PHP, C/C++, Java and more.            </div>
+       	</div>
+       
+        
+        <div id="related-posts" class="clearfix"><h3>Related Posts</h3>
+                                <div class="related-post clearfix">
+                                     <div class="related-posts-content">
+                                         <h4><a href="http://www.coderslexicon.com/php-wants-to-be-your-web-language-of-the-future-part-3-array-string-dereferencing-and-empty/" title="PHP Wants To Be Your Web Language Of The Future – Part 3 – Constant Array/String Dereferencing and Empty for Expressions" class="related-post-title">PHP Wants To Be Your Web Language Of The Future – Part 3 – Constant Array/String Dereferencing and Empty for Expressions</a></h4>
+                                     </div>
+                    
+                                </div>
+                  
+                                <div class="related-post clearfix">
+                                     <div class="related-posts-content">
+                                         <h4><a href="http://www.coderslexicon.com/easy-way-to-post-multiple-javascript-values-to-php-using-jquery-ajax/" title="Easy Way to Post Multiple JavaScript Values to PHP Using jQuery AJAX" class="related-post-title">Easy Way to Post Multiple JavaScript Values to PHP Using jQuery AJAX</a></h4>
+                                     </div>
+                    
+                                </div>
+                  
+                                <div class="related-post clearfix">
+                                     <div class="related-posts-content">
+                                         <h4><a href="http://www.coderslexicon.com/spewing-javascript-json-with-php/" title="Spewing JavaScript JSON with PHP" class="related-post-title">Spewing JavaScript JSON with PHP</a></h4>
+                                     </div>
+                    
+                                </div>
+                  </div>
+        <div class="clear"></div>
+                
+	
+<div id="disqus_thread"><iframe id="dsq-app3186" name="dsq-app3186" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/saved_resource.html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 3343px !important;" __idm_frm__="210" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+  
+    
+        <div id="single-nav" class="clearfix">
+            <div id="single-nav-left"><a href="http://www.coderslexicon.com/my-10-favorite-sublime-text-tools-and-shortcuts-for-beginners/" rel="prev">«  Previous Post</a></div>
+            <div id="single-nav-right"><a href="http://www.coderslexicon.com/book-review-php-5-in-practice/" rel="next">Next Post »</a></div>
+        </div>
+    </div>
+	
+            
+<div id="sidebar">          
+	<div class="sidebar-box clearfix"><form method="get" id="searchbar" action="http://www.coderslexicon.com/">
+<input type="text" size="16" name="s" value="Search" onfocus="if(this.value==this.defaultValue)this.value=&#39;&#39;;" onblur="if(this.value==&#39;&#39;)this.value=this.defaultValue;" id="search">
+<input type="submit" id="searchsubmit" value="">
+</form></div><div class="sidebar-box clearfix"><h4>Topic Categories</h4>		<ul>
+	<li class="cat-item cat-item-6"><a href="http://www.coderslexicon.com/category/net-programming/" title="Articles related to .NET programming topics">.NET Programming</a> (58)
+</li>
+	<li class="cat-item cat-item-10"><a href="http://www.coderslexicon.com/category/announcements/" title="The Latest Announcements from the Coders Lexicon">Announcements</a> (2)
+</li>
+	<li class="cat-item cat-item-9"><a href="http://www.coderslexicon.com/category/desktop/" title="Desktop programming related articles not related to .NET (Java, Python, Ruby etc)">Desktop Programming</a> (81)
+</li>
+	<li class="cat-item cat-item-3"><a href="http://www.coderslexicon.com/category/general/" title="Topics that talk about general programming principles">General Discussion</a> (102)
+</li>
+	<li class="cat-item cat-item-24"><a href="http://www.coderslexicon.com/category/programming-theory/" title="Best practices, structuring of code, dissecting algorithms and talking about the &quot;Why?&quot;">Programming Theory</a> (110)
+</li>
+	<li class="cat-item cat-item-177"><a href="http://www.coderslexicon.com/category/reviews/">Reviews</a> (1)
+</li>
+	<li class="cat-item cat-item-7"><a href="http://www.coderslexicon.com/category/web-development/" title="Category for articles related to web development">Web Development</a> (60)
+</li>
+		</ul>
+</div><div class="sidebar-box clearfix"><div id="lextab-1"><ul class="lextab-list"><li class="lextab-pop">Popular Posts</li><li class="lextab-rec">Recent Posts</li></ul><div class="lextab-pane">
+					<div class="lextab-popular">
+						<ul style="list-style-type: none;"><li><a href="http://www.coderslexicon.com/why-everyone-should-not-learn-to-code/" title="Why Everyone Should NOT Learn to Code">Why Everyone Should NOT Learn to Code</a></li><li><a href="http://www.coderslexicon.com/can-tools-make-coding-too-easy/" title="Can Tools Make Coding Too Easy?">Can Tools Make Coding Too Easy?</a></li><li><a href="http://www.coderslexicon.com/the-basics-of-passing-values-from-javascript-to-php-and-back/" title="The Basics of Passing Values From JavaScript to PHP and Back">The Basics of Passing Values From JavaScript to PHP and Back</a></li><li><a href="http://www.coderslexicon.com/my-love-hate-relationship-with-php-traits/" title="My Love / Hate Relationship with PHP Traits">My Love / Hate Relationship with PHP Traits</a></li><li><a href="http://www.coderslexicon.com/a-beginner-tic-tac-toe-class-for-java/" title="A Beginner Tic-Tac-Toe Class for Java">A Beginner Tic-Tac-Toe Class for Java</a></li></ul>
+					</div>
+				  	<div class="lextab-recent">
+						<ul style="list-style-type: none;"><li><a href="http://www.coderslexicon.com/top-10-tips-for-php-programmers/" title="Top 10 Tips for PHP Programmers">Top 10 Tips for PHP Programmers</a></li><li><a href="http://www.coderslexicon.com/a-brief-overview-of-honey-pot-form-fields/" title="A Brief Overview of Honey Pot Form Fields">A Brief Overview of Honey Pot Form Fields</a></li><li><a href="http://www.coderslexicon.com/rolling-dice-in-java-c-and-php/" title="Rolling Dice in Java, C# and PHP">Rolling Dice in Java, C# and PHP</a></li><li><a href="http://www.coderslexicon.com/the-coding-survival-guide-habits-and-pitfalls-now-available/" title="The Coding Survival Guide – Habits and Pitfalls Now Available!">The Coding Survival Guide – Habits and Pitfalls Now Available!</a></li><li><a href="http://www.coderslexicon.com/stubbing-out-functions/" title="Stubbing Out Functions, Do You Do It?">Stubbing Out Functions, Do You Do It?</a></li></ul>
+					</div>
+			  </div></div></div></div>
+<div class="clear"></div>
+
+ 
+<div class="share">
+    <div class="share-btn">
+    	<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 61px; height: 20px;" title="Twitter Tweet Button" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/tweet_button.7a5ca036ea5299f1d2ebb2234731e35e.en.html" __idm_frm__="209" data-url="http://www.coderslexicon.com/the-basics-of-passing-values-from-javascript-to-php-and-back/"></iframe><script type="text/javascript" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/widgets.js.download"></script>
+    </div>
+    <div class="share-btn facebook-share">
+    	<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="f27ce79291b4c78" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/ping.html" style="display: none;" __idm_frm__="205"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/bSTT5dUx9MY.html" style="border: none;" __idm_frm__="203"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/bSTT5dUx9MY(1).html" style="border: none;" __idm_frm__="204"></iframe></div></div></div><script src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/all.js.download"></script><fb:like href="http://www.coderslexicon.com/the-basics-of-passing-values-from-javascript-to-php-and-back/" send="true" layout="box_count" width="80" show_faces="false" font="" class=" fb_iframe_widget" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=211103805598560&amp;container_width=0&amp;href=http%3A%2F%2Fwww.coderslexicon.com%2Fthe-basics-of-passing-values-from-javascript-to-php-and-back%2F&amp;layout=box_count&amp;locale=en_US&amp;sdk=joey&amp;send=true&amp;show_faces=false&amp;width=80"><span style="vertical-align: bottom; width: 52px; height: 64px;"><iframe name="f1e9a07d5c3105" width="80px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" title="fb:like Facebook Social Plugin" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/like.html" style="border: none; visibility: visible; width: 52px; height: 64px;" __idm_frm__="208" class=""></iframe></span></fb:like>
+    </div>
+    <div class="share-btn">
+    	<div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 50px; height: 24px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 50px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I0_1532329920103" name="I0_1532329920103" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/fastbutton.html" data-gapiattached="true" __idm_frm__="202" title="G+"></iframe></div>
+    </div>
+</div>
+
+</div>
+ 
+<div id="footer-wrap">
+<div id="footer" class="clearfix"> 
+      <div class="footer-widget">
+          <div class="footer-box"><h4>About the Lexicon</h4>			<div class="textwidget">The brain child of <a href="https://www.timhurd.com/">Martyr2</a>, <a href="http://www.dreamincode.net/" target="_blank">Dream.In.Code</a> Mentor and veteran programmer, the Coders Lexicon is a website dedicated to the advancement of computer programming and technology. It offers advice, coding resources and references to cover web and desktop development.</div>
+		</div>      </div>
+      
+      <div class="footer-widget">
+          		<div class="footer-box">		<h4>Recent Posts</h4>		<ul>
+											<li>
+					<a href="http://www.coderslexicon.com/top-10-tips-for-php-programmers/">Top 10 Tips for PHP Programmers</a>
+									</li>
+											<li>
+					<a href="http://www.coderslexicon.com/a-brief-overview-of-honey-pot-form-fields/">A Brief Overview of Honey Pot Form Fields</a>
+									</li>
+											<li>
+					<a href="http://www.coderslexicon.com/rolling-dice-in-java-c-and-php/">Rolling Dice in Java, C# and PHP</a>
+									</li>
+											<li>
+					<a href="http://www.coderslexicon.com/the-coding-survival-guide-habits-and-pitfalls-now-available/">The Coding Survival Guide – Habits and Pitfalls Now Available!</a>
+									</li>
+					</ul>
+		</div>      </div>
+        
+      <div class="footer-widget">
+          <div class="footer-box"><h4>Categories</h4>		<ul>
+	<li class="cat-item cat-item-6"><a href="http://www.coderslexicon.com/category/net-programming/" title="Articles related to .NET programming topics">.NET Programming</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://www.coderslexicon.com/category/announcements/" title="The Latest Announcements from the Coders Lexicon">Announcements</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://www.coderslexicon.com/category/desktop/" title="Desktop programming related articles not related to .NET (Java, Python, Ruby etc)">Desktop Programming</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://www.coderslexicon.com/category/general/" title="Topics that talk about general programming principles">General Discussion</a>
+</li>
+	<li class="cat-item cat-item-24"><a href="http://www.coderslexicon.com/category/programming-theory/" title="Best practices, structuring of code, dissecting algorithms and talking about the &quot;Why?&quot;">Programming Theory</a>
+</li>
+	<li class="cat-item cat-item-177"><a href="http://www.coderslexicon.com/category/reviews/">Reviews</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://www.coderslexicon.com/category/web-development/" title="Category for articles related to web development">Web Development</a>
+</li>
+		</ul>
+</div>      </div>
+        
+      <div class="footer-widget remove-margin">   
+          <div class="footer-box"><h4>Follow the Coders</h4>			<div class="textwidget"><ul>
+	<li><img src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/facebook.png" class="social-icon"> <a href="http://www.facebook.com/coderslexicon" title="Friend us on Facebook">Friend us on Facebook</a>
+	</li>
+
+	<li><img src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/twitter.png" class="social-icon"> <a href="http://twitter.com/coderslexicon" title="Follow us on Twitter">@coderslexicon on Twitter</a>
+	</li>
+
+	<li><img src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/feedburner.png" class="social-icon"> <a href="http://feeds.feedburner.com/TheCodersLexicon" title="Follow our feed!">Subscribe on Feedburner!</a>
+	</li>
+
+        <li><img src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/google-plus.png" class="social-icon"> <a href="http://plus.google.com/110631731090935965268?prsrc=3" rel="publisher" style="text-decoration:none;">Add us to your circle</a>
+         </li>
+
+         <li><img src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/email-us.png" class="social-icon"> <a href="mailto:webmaster@coderslexicon.com" rel="publisher" style="text-decoration:none;">Contact Us</a>
+         </li>
+</ul></div>
+		</div>      </div>
+      
+</div>
+</div>
+
+<div id="copyright-wrap">
+    <div id="copyright">
+        © 2018  The Coders Lexicon. All rights reserved. <a href="http://www.coderslexicon.com/privacy-policy" style="color: #b3b3b3;">Privacy Policy</a>
+    </div>
+</div>
+
+<!-- Footer -->
+
+<!-- Powered by WPtouch: 4.3.28 --><script type="text/javascript" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/shCore.js.download"></script>
+<script type="text/javascript" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/shBrushPhp.js.download"></script>
+<script type="text/javascript" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/shBrushPlain.js.download"></script>
+<script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://www.coderslexicon.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/styles/shCore.css?ver=2.1.364";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://www.coderslexicon.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/styles/shThemeDefault.css?ver=2.1.364";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.clipboardSwf = 'http://www.coderslexicon.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter2/scripts/clipboard.swf';
+	SyntaxHighlighter.config.strings.expandSource = 'show source';
+	SyntaxHighlighter.config.strings.viewSource = 'view source';
+	SyntaxHighlighter.config.strings.copyToClipboard = 'copy to clipboard';
+	SyntaxHighlighter.config.strings.copyToClipboardConfirmation = 'The code is in your clipboard now';
+	SyntaxHighlighter.config.strings.print = 'print';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['wrap-lines'] = false;
+	SyntaxHighlighter.all();
+</script>
+<link rel="stylesheet" id="lextabs-css" href="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/style(1).css" type="text/css" media="all">
+<script type="text/javascript" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/comment-reply.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"thecoderslexicon"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/comment_count.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var embedVars = {"disqusConfig":{"integration":"wordpress 3.0.16"},"disqusIdentifier":"1871 http:\/\/www.coderslexicon.com\/?p=1871","disqusShortname":"thecoderslexicon","disqusTitle":"The Basics of Passing Values From JavaScript to PHP and Back","disqusUrl":"http:\/\/www.coderslexicon.com\/the-basics-of-passing-values-from-javascript-to-php-and-back\/","postId":"1871"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/comment_embed.js.download"></script>
+<script type="text/javascript" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/superfish.js.download"></script>
+<script type="text/javascript" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/supersubs.js.download"></script>
+<script type="text/javascript" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/wp-embed.min.js.download"></script>
+<script type="text/javascript" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/lextabs.js.download"></script>
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/widget_iframe.7a5ca036ea5299f1d2ebb2234731e35e.html" title="Twitter settings iframe" style="display: none;" __idm_frm__="201"></iframe><iframe name="oauth2relay1206122658" id="oauth2relay1206122658" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/postmessageRelay.html" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><iframe style="display: none;" __idm_frm__="207" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/saved_resource(1).html"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" __idm_frm__="211" title="Twitter analytics iframe" src="./The Basics of Passing Values From JavaScript to PHP and Back _ The Coders Lexicon_files/saved_resource(2).html"></iframe></body></html>
